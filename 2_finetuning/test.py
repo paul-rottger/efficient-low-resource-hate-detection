@@ -1,5 +1,9 @@
 import pandas as pd
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
-df = pd.read_csv("./0_data/main/1_clean/basile2019_spanish/test2500.csv")
+tokenizer = AutoTokenizer.from_pretrained("HannahRoseKirk/Hatemoji")
 
-print(df.text[1])
+model = AutoModelForSequenceClassification.from_pretrained("HannahRoseKirk/Hatemoji")
+
+print("Test classification")
+print(model.predict("This is a test phrase"))

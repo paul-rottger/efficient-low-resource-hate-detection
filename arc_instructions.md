@@ -1,8 +1,12 @@
 ### CONNECTING TO ARC
-1. Activate Oxford VPN
-2. ssh -X sedm6193@arc-login.arc.ox.ac.uk
+Activate Oxford VPN
+ssh -X sedm6193@arc-login.arc.ox.ac.uk
+
+### ACTIVATING CONDA ON ARC
+module load Anaconda3/2020.11
+source activate /data/engs-hatespeech/sedm6193/conda-envs/low-resource-hate
 
 ### USEFUL COMMANDS
-1. Compute Budget: mybalance
-2. Queue Status: squeue
+Compute Budget: mybalance
+Queue Status: squeue
 
