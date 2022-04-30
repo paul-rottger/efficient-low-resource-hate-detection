@@ -26,11 +26,11 @@ for trainpath in $DATA/low-resource-hate/0_data/main/1_clean/dynabench2021_engli
     python finetune.py \
         --model_name_or_path $DATA/low-resource-hate/default-models/twitter-xlm-roberta-base \
         --train_file $trainpath \
-        --validation_file $DATA/low-resource-hate/0_data/main/1_clean/dynabench2021_english/test_2500.csv \
-        --test_file $DATA/low-resource-hate/0_data/main/1_clean/dynabench2021_english/test_2500.csv \
+        --validation_file $trainpath \
+        --test_file $trainpath \
         --dataset_cache_dir $DATA/low-resource-hate/z_cache/datasets \
         --do_train \
-        --per_device_train_batch_size 32 \
+        --per_device_train_batch_size 4 \
         --num_train_epochs 3 \
         --max_seq_length 128 \
         --save_strategy "no" \
