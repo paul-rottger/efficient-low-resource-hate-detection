@@ -9,7 +9,8 @@ HINT: Deactivate venv BEFORE submitting a SLURM job using sbatch
 
 ### USEFUL COMMANDS
 Show compute budget:    mybalance
-Submit job: sbatch      script.sh
+Submit job:             sbatch script.sh
 Show queue status:      squeue
+Show remaining storage: myquota
 
 

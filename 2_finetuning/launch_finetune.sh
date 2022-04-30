@@ -24,7 +24,7 @@ nvidia-smi
 
 for trainpath in $DATA/low-resource-hate/0_data/main/1_clean/dynabench2021_english/train/train_20_rs1.csv; do
     python finetune.py \
-        --model_name_or_path "cardiffnlp/twitter-xlm-roberta-base" \
+        --model_name_or_path $DATA/low-resource-hate/default-models/twitter-xlm-roberta-base \
         --train_file $trainpath \
         --validation_file $DATA/low-resource-hate/0_data/main/1_clean/dynabench2021_english/test_2500.csv \
         --test_file $DATA/low-resource-hate/0_data/main/1_clean/dynabench2021_english/test_2500.csv \
@@ -37,5 +37,5 @@ for trainpath in $DATA/low-resource-hate/0_data/main/1_clean/dynabench2021_engli
         --do_eval \
         --evaluation_strategy "epoch" \
         --output_dir $DATA/low-resource-hate/finetuned-models/xlmt_dynabench2021_english \
-        --overwrite_output_dir \
+        --overwrite_output_dir
 done
