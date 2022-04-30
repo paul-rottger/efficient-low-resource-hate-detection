@@ -22,10 +22,10 @@ source activate $DATA/conda-envs/lrh-env
 # Display GPU status
 nvidia-smi
 
-for trainpath in $DATA/gab-language-change/0_data/clean/labelled_reddit/month_splits/train_2018_01_${data_size}k.csv; do
+for trainpath in $DATA/low-resource-hate/0_data/main/1_clean/dynabench2021_english/train/train_20_rs1.csv; do
     python finetune.py \
         --model_name_or_path "cardiffnlp/twitter-xlm-roberta-base" \
-        --train_file $DATA/low-resource-hate/0_data/main/1_clean/dynabench2021_english/train/train_20_rs1.csv \
+        --train_file $trainpath \
         --validation_file $DATA/low-resource-hate/0_data/main/1_clean/dynabench2021_english/test_2500.csv \
         --test_file $DATA/low-resource-hate/0_data/main/1_clean/dynabench2021_english/test_2500.csv \
         --dataset_cache_dir $DATA/low-resource-hate/z_cache/datasets \
