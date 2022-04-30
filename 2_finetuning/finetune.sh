@@ -1,12 +1,12 @@
 #!/bin/sh
 
 #SBATCH --job-name=test-finetune
-#SBATCH --ntasks-per-node=1
-#SBATCH --mem-per-cpu=8G
+#SBATCH --clusters=htc
+#SBATCH --gres=gpu:1
 #SBATCH --time=00:10:00
 #SBATCH --partition=short 
-#SBATCH --output=test-finetune.out
-#SBATCH --error=test-finetune.err
+#SBATCH --output=outputs.out
+#SBATCH --error=errors.err
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=paul.rottger@oii.ox.ac.uk
 

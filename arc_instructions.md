@@ -2,11 +2,14 @@
 Activate Oxford VPN
 ssh -X sedm6193@arc-login.arc.ox.ac.uk
 
-### ACTIVATING CONDA ON ARC
+## CONDA ON ARC
 module load Anaconda3/2020.11
 source activate /data/engs-hatespeech/sedm6193/conda-envs/low-resource-hate
+HINT: Deactivate venv BEFORE submitting a SLURM job using sbatch
 
 ### USEFUL COMMANDS
-Compute Budget: mybalance
-Queue Status: squeue
+Show compute budget:    mybalance
+Submit job: sbatch      script.sh
+Show queue status:      squeue
+
 
