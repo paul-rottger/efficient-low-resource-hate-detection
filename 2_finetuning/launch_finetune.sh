@@ -1,8 +1,8 @@
 #!/bin/sh
 
-#SBATCH --job-name=db-20k
+#SBATCH --job-name=rs1
 #SBATCH --clusters=arc
-#SBATCH --ntasks-per-node=1
+#SBATCH --ntasks-per-node=16
 #SBATCH --time=10:00:00
 #SBATCH --partition=short 
 #SBATCH --output=outputs.out
@@ -22,20 +22,25 @@ source activate $DATA/conda-envs/lrh-env
 # Display GPU status
 nvidia-smi
 
-for trainpath in $DATA/low-resource-hate/0_data/main/1_clean/dynabench2021_english/train/train_20000_rs1.csv; do
-    python finetune.py \
-        --model_name_or_path $DATA/low-resource-hate/default-models/twitter-xlm-roberta-base \
-        --train_file $trainpath \
-        --validation_file $DATA/low-resource-hate/0_data/main/1_clean/dynabench2021_english/test_2500.csv \
-        --test_file $DATA/low-resource-hate/0_data/main/1_clean/dynabench2021_english/test_2500.csv \
-        --dataset_cache_dir $DATA/low-resource-hate/z_cache/datasets \
-        --do_train \
-        --per_device_train_batch_size 16 \
-        --num_train_epochs 3 \
-        --max_seq_length 128 \
-        --save_strategy "no" \
-        --do_eval \
-        --evaluation_strategy "epoch" \
-        --output_dir $DATA/low-resource-hate/finetuned-models/xlmt_dynabench2021_english_20k \
-        --overwrite_output_dir
+# Pick base model to then finetune
+basemodel="xlmt_dynabench2021_english_20k"
+
+for dataset in basile2019_spanish fortuna2019_portuguese ousidhoum2019_french ousidhoum2019_arabic sanguinetti2020_italian; do
+    for split in 10_rs1 20_rs1 50_rs1 100_rs1 200_rs1 500_rs1 1000_rs1 2000_rs1; do 
+        python finetune.py \
+            --model_name_or_path $DATA/low-resource-hate/english-base-models/${basemodel} \
+            --train_file $DATA/low-resource-hate/0_data/main/1_clean/${dataset}/train/train_${split}.csv \
+            --validation_file $DATA/low-resource-hate/0_data/main/1_clean/${dataset}/test_2500.csv \
+            --test_file $DATA/low-resource-hate/0_data/main/1_clean/${dataset}/test_2500.csv \
+            --dataset_cache_dir $DATA/low-resource-hate/z_cache/datasets \
+            --do_train \
+            --per_device_train_batch_size 16 \
+            --num_train_epochs 3 \
+            --max_seq_length 128 \
+            --save_strategy "no" \
+            --do_eval \
+            --evaluation_strategy "epoch" \
+            --output_dir $DATA/low-resource-hate/finetuned-models/${basemodel}_${dataset}_${split} \
+            --overwrite_output_dir
+    done
 done

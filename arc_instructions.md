@@ -15,7 +15,8 @@ Cancel job:             scancel JOB_ID
 Show queue status:      squeue
 Show remaining storage: myquota
 
-### CPU SLURM
-#SBATCH --ntasks-per-node=8
-
+### SLURM CPU vs GPU
+#SBATCH --ntasks-per-node=1
+#SBATCH --clusters=htc
+#SBATCH --gres=gpu:1
 
