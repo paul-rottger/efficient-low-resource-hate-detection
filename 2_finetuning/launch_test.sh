@@ -24,7 +24,7 @@ nvidia-smi
 
 for dataset in ousidhoum2019_arabic ousidhoum2019_french sanguinetti2020_italian basile2019_spanish fortuna2019_portuguese; do
     for modelpath in $DATA/low-resource-hate/finetuned-models/*${dataset}*/; do
-        for testpath in $DATA/low-resource-hate/0_data/main/1_clean/${dataset}/test_*.csv
+        for testpath in $DATA/low-resource-hate/0_data/main/1_clean/${dataset}/test_*.csv; do
             python finetune_and_test.py \
                 --model_name_or_path ${modelpath} \
                 --dataset_cache_dir $DATA/low-resource-hate/z_cache/datasets \
@@ -34,4 +34,6 @@ for dataset in ousidhoum2019_arabic ousidhoum2019_french sanguinetti2020_italian
                 --per_device_eval_batch_size 32 \
                 --max_seq_length 128 \
                 --output_dir . \
+        done
+    done
 done
