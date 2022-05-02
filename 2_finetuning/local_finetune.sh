@@ -1,10 +1,9 @@
 #!/bin/sh
 
-python finetune.py \
+python finetune_and_test.py \
     --model_name_or_path "cardiffnlp/twitter-xlm-roberta-base" \
     --train_file ../0_data/main/1_clean/dynabench2021_english/train/train_20_rs1.csv \
     --validation_file ../0_data/main/1_clean/dynabench2021_english/train/train_20_rs1.csv \
-    --test_file ../0_data/main/1_clean/dynabench2021_english/train/train_20_rs1.csv \
     --dataset_cache_dir ../z_cache \
     --do_train \
     --per_device_train_batch_size 4 \

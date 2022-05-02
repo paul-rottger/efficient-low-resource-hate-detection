@@ -4,7 +4,7 @@
 #SBATCH --clusters=arc
 #SBATCH --ntasks-per-node=16
 #SBATCH --time=10:00:00
-#SBATCH --partition=short 
+#SBATCH --partition=short
 #SBATCH --output=outputs.out
 #SBATCH --error=errors.err
 #SBATCH --mail-type=ALL
@@ -26,12 +26,11 @@ nvidia-smi
 basemodel="xlmt_dynabench2021_english_20k"
 
 for dataset in basile2019_spanish fortuna2019_portuguese ousidhoum2019_french ousidhoum2019_arabic sanguinetti2020_italian; do
-    for split in 10_rs1 20_rs1 50_rs1 100_rs1 200_rs1 500_rs1 1000_rs1 2000_rs1; do 
-        python finetune.py \
+    for split in 10_rs1 20_rs1 50_rs1 100_rs1 200_rs1 500_rs1 1000_rs1 2000_rs1; do
+        python finetune_and_test.py \
             --model_name_or_path $DATA/low-resource-hate/english-base-models/${basemodel} \
             --train_file $DATA/low-resource-hate/0_data/main/1_clean/${dataset}/train/train_${split}.csv \
             --validation_file $DATA/low-resource-hate/0_data/main/1_clean/${dataset}/test_2500.csv \
-            --test_file $DATA/low-resource-hate/0_data/main/1_clean/${dataset}/test_2500.csv \
             --dataset_cache_dir $DATA/low-resource-hate/z_cache/datasets \
             --do_train \
             --per_device_train_batch_size 16 \

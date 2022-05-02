@@ -5,6 +5,7 @@ import os
 import random
 import sys
 import numpy as np
+import pandas as pd
 import transformers
 
 from dataclasses import dataclass, field
@@ -24,8 +25,10 @@ from transformers import (
 )
 from transformers.trainer_utils import is_main_process
 from sklearn.metrics import precision_recall_fscore_support, f1_score
+from pathlib import Path
 
 
+# initialise logger
 logger = logging.getLogger(__name__)
 
 
@@ -60,17 +63,11 @@ class DataTrainingArguments:
     dataset_cache_dir: Optional[str] = field(
         default=None, metadata={"help": "PR custom: path to cache directory for storing datasets"}
     )
-
-    def __post_init__(self):
-        if self.train_file is None or self.validation_file is None:
-            raise ValueError("Missing training or validation file.")
-        else:
-            train_extension = self.train_file.split(".")[-1]
-            assert train_extension in ["csv"], "`train_file` should be a csv file."
-            validation_extension = self.validation_file.split(".")[-1]
-            assert (
-                validation_extension == train_extension
-            ), "`validation_file` should have the same extension (csv) as `train_file`."
+    test_results_dir: Optional[str] = field(
+        default=None, metadata={"help": "PR custom: path to directory for storing test results"}
+    )
+    test_results_name: Optional[str] = field(default='results', metadata = {"help": "PR custom: specify name for test results .csv"}
+    )
 
 
 @dataclass
@@ -128,38 +125,44 @@ def main():
     # Set seed before initializing model.
     set_seed(training_args.seed)
 
-    # LOADING DATASETS
+    # LOADING DATASETS from specified file paths
     # Expecting "label" and "text" columns
 
-    # Loading a dataset from your local files.
-    data_files = {"train": data_args.train_file, "validation": data_args.validation_file}
+    data_files = dict()
 
-    # Get the test dataset: you can provide your own CSV/JSON test file (see below) when you use `do_predict`
-    if data_args.test_file is not None:
-        data_files["test"] = data_args.test_file
-    else:
-        if training_args.do_predict:
+    # TRAIN
+    if training_args.do_train:
+        if data_args.train_file is not None:
+            data_files["train"] = data_args.train_file
+        else:
+            raise ValueError("Need a training file for `do_train`.")
+    
+    # DEV 
+    if training_args.do_eval:
+        if data_args.validation_file is not None:
+            data_files["validation"] = data_args.validation_file
+        else:
+            raise ValueError("Need a validation file for `do_eval`.")
+
+    # TEST
+    if training_args.do_predict:
+        if data_args.test_file is not None:
+            data_files["test"] = data_args.test_file
+        else:
             raise ValueError("Need a test file for `do_predict`.")
 
     for key in data_files.keys():
         logger.info(f"loaded {key}: {data_files[key]}")
 
-    if data_args.train_file.endswith(".csv"):
-        # Loading a dataset from local csv files
-        # lineterminator option to address quirk in Dynabench data
-        datasets = load_dataset("csv", data_files=data_files, cache_dir=data_args.dataset_cache_dir, lineterminator="\n")
-    else:
-        raise ValueError("`train_file` should be a csv file.")
+    # load datafiles to dataset, expecting csv
+    datasets = load_dataset("csv", data_files=data_files, cache_dir=data_args.dataset_cache_dir, lineterminator="\n")
 
-    # Count number of labels
-    label_list = datasets["train"].unique("label")
+    # count number of labels --> select dataset by index so that this works for training and testing
+    label_list = datasets[[key for key in datasets][0]].unique("label")
     label_list.sort()  # Sorting for determinism
     num_labels = len(label_list)
 
-    # Load pretrained model and tokenizer
-    #
-    # In distributed training, the .from_pretrained methods guarantee that only one local process can concurrently
-    # download model & vocab.
+    # load pretrained model and tokenizer
     config = AutoConfig.from_pretrained(
         model_args.config_name if model_args.config_name else model_args.model_name_or_path,
         num_labels=num_labels,
@@ -195,30 +198,26 @@ def main():
     max_seq_length = min(data_args.max_seq_length, tokenizer.model_max_length)
 
     def preprocess_function(examples):
-        # Tokenize the texts
+        # tokenize the texts
         args = (
             (examples["text"],)
         )
         result = tokenizer(*args, padding=padding, max_length=max_seq_length, truncation=True)
 
-        # Map labels to IDs
+        # map labels to IDs
         if label_to_id is not None and "label" in examples:
             result["label"] = [(label_to_id[l] if l != -1 else -1) for l in examples["label"]]
         return result
 
     datasets = datasets.map(preprocess_function, batched=True, load_from_cache_file=not data_args.overwrite_cache)
 
-    train_dataset = datasets["train"]
-    eval_dataset = datasets["validation"]
-    if data_args.test_file is not None:
-        test_dataset = datasets["test"]
+    # log a few random samples from the training, dev or test set:
+    for index in random.sample(range(len(datasets[[key for key in datasets][0]])), 3):
+        logger.info(f"Sample {index} of the {[key for key in datasets][0]} set: {datasets[[key for key in datasets][0]][index]}.")
 
-    # Log a few random samples from the training set:
-    for index in random.sample(range(len(train_dataset)), 3):
-        logger.info(f"Sample {index} of the training set: {train_dataset[index]}.")
-
-    # Define custom compute_metrics function. It takes an `EvalPrediction` object (a namedtuple with a
-    # predictions and label_ids field) and has to return a dictionary string to float.
+    # define custom compute_metrics function
+    # takes an `EvalPrediction` object (a namedtuple with a predictions and label_ids field)
+    # has to return a dictionary string to float
     def compute_metrics(p: EvalPrediction):
         preds = p.predictions[0] if isinstance(p.predictions, tuple) else p.predictions
         preds = np.argmax(preds, axis=1)
@@ -227,7 +226,7 @@ def main():
         metrics_dict["hate_precision"], metrics_dict["hate_recall"], metrics_dict["hate_f1"], _ = precision_recall_fscore_support(p.label_ids, preds, average="binary")
         return metrics_dict
 
-    # Data collator will default to DataCollatorWithPadding, so we change it if we already did the padding.
+    # data collator will default to DataCollatorWithPadding, so we change it if we already did the padding.
     if data_args.pad_to_max_length:
         data_collator = default_data_collator
     elif training_args.fp16:
@@ -235,18 +234,18 @@ def main():
     else:
         data_collator = None
 
-    # Initialize our Trainer
+    # initialize the Trainer
     trainer = Trainer(
         model=model,
         args=training_args,
-        train_dataset=train_dataset,
-        eval_dataset=eval_dataset if training_args.do_eval else None,
+        train_dataset=datasets["train"] if training_args.do_train else None,
+        eval_dataset=datasets["validation"] if training_args.do_eval else None,
         compute_metrics=compute_metrics,
         tokenizer=tokenizer,
         data_collator=data_collator,
     )
 
-    # Training
+    # TRAINING
     if training_args.do_train:
         logger.info("*** TRAIN ***")
         train_result = trainer.train()
@@ -260,33 +259,34 @@ def main():
 
         logger.info(metrics)
 
-    # Evaluation
+    # EVALUATION ON DEV SET
     if training_args.do_eval:
         logger.info("*** EVAL ***")
 
-        eval_result = trainer.evaluate(eval_dataset=eval_dataset)
+        eval_result = trainer.evaluate(eval_dataset=datasets["validation"])
 
         trainer.log_metrics("eval", eval_result)
         trainer.save_metrics("eval", eval_result)
 
         logger.info(eval_result)
 
-
+    # TESTING ON TEST SET
     if training_args.do_predict:
         logger.info("*** TEST ***")
 
-        test_dataset.remove_columns("label")
-        predictions = trainer.predict(test_dataset=test_dataset).predictions
-        predictions = np.argmax(predictions, axis=1)
+        # specify file path for storing test results
+        test_results_path = os.path.join(data_args.test_results_dir, f"{data_args.test_results_name}")
 
-        output_test_file = os.path.join(training_args.output_dir, f"test_results.txt")
-        if trainer.is_world_process_zero():
-            with open(output_test_file, "w") as writer:
-                logger.info(f"***** Test results *****")
-                writer.write("index\tprediction\n")
-                for index, item in enumerate(predictions):
-                    item = label_list[item]
-                    writer.write(f"{index}\t{item}\n")
+        # get predictions on test set (includes gold label column)
+        test_results=trainer.predict(test_dataset=datasets["test"]) 
+
+        # store gold labels and model predictions
+        labels = pd.DataFrame(test_results.label_ids, columns = ['label']).reset_index()
+        predictions = pd.DataFrame(np.argmax(test_results.predictions, axis=1), columns = ['prediction']).reset_index()
+        
+        # save to csv in specified path
+        Path(data_args.test_results_dir).mkdir(parents=True, exist_ok=True)
+        labels.merge(predictions).to_csv(test_results_path, index = False)
     
     return 'completed finetuning'
 
