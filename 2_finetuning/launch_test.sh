@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#SBATCH --job-name=test-nonenglish
+#SBATCH --job-name=test-english
 #SBATCH --clusters=arc
 #SBATCH --ntasks-per-node=16
 #SBATCH --time=10:00:00
@@ -20,8 +20,8 @@ source activate $DATA/conda-elnvs/lrh-env
 # display GPU status (uncomment if using GPU)
 # nvidia-smi
 
-for dataset in ousidhoum2019_arabic ousidhoum2019_french sanguinetti2020_italian basile2019_spanish fortuna2019_portuguese; do
-    for modelpath in $DATA/low-resource-hate/finetuned-models/*${dataset}*/; do
+for dataset in bas19_es for19_pt ous19_fr ous19_ar san20_it; do
+    for modelpath in $DATA/low-resource-hate/english-base-models/xlmt_dyn21_en_20000_rs1/; do
         for testpath in $DATA/low-resource-hate/0_data/main/1_clean/${dataset}/test_*.csv; do
             python finetune_and_test.py \
                 --model_name_or_path ${modelpath} \
