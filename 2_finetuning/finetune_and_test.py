@@ -134,6 +134,7 @@ def main():
     if training_args.do_train:
         if data_args.train_file is not None:
             data_files["train"] = data_args.train_file
+            logger.info(f"Loaded TRAINING set {data_args.train_file}")
         else:
             raise ValueError("Need a training file for `do_train`.")
     
@@ -141,6 +142,7 @@ def main():
     if training_args.do_eval:
         if data_args.validation_file is not None:
             data_files["validation"] = data_args.validation_file
+            logger.info(f"Loaded DEV set {data_args.validation_file}")
         else:
             raise ValueError("Need a validation file for `do_eval`.")
 
@@ -148,6 +150,7 @@ def main():
     if training_args.do_predict:
         if data_args.test_file is not None:
             data_files["test"] = data_args.test_file
+            logger.info(f"Loaded TEST set {data_args.test_file}")
         else:
             raise ValueError("Need a test file for `do_predict`.")
 

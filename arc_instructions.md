@@ -8,7 +8,7 @@ module load Anaconda3/2020.11
 source activate /data/engs-hatespeech/sedm6193/conda-envs/lrh-env
 HINT: Deactivate venv BEFORE submitting a SLURM job using sbatch
 
-### USEFUL COMMANDS
+### USEFUL SLURM COMMANDS
 Show compute budget:    mybalance
 Submit job:             sbatch script.sh
 Cancel job:             scancel JOB_ID
