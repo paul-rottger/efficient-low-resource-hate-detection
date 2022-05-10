@@ -15,10 +15,7 @@ module purge
 module load Anaconda3/2020.11
 
 # activate the right conda environment
-source activate $DATA/conda-elnvs/lrh-env
-
-# display GPU status (uncomment if using GPU)
-# nvidia-smi
+source activate $DATA/conda-envs/lrh-env
 
 for dataset in bas19_es for19_pt ous19_fr ous19_ar san20_it; do
     for modelpath in $DATA/low-resource-hate/english-base-models/xlmt_dyn21_en_20000_rs1/; do
