@@ -15,7 +15,6 @@ from transformers import (
     AutoConfig,
     AutoModelForSequenceClassification,
     AutoTokenizer,
-    DataCollatorWithPadding,
     EvalPrediction,
     HfArgumentParser,
     Trainer,
@@ -67,6 +66,8 @@ class DataTrainingArguments:
         default=None, metadata={"help": "PR custom: path to directory for storing test results"}
     )
     test_results_name: Optional[str] = field(default='results', metadata = {"help": "PR custom: specify name for test results .csv"}
+    )
+    store_prediction_logits: Optional[str] = field(default=False, metadata = {"help": "PR custom: decide whether to store logits along with discrete predictions during test"}
     )
 
 
@@ -161,7 +162,8 @@ def main():
     datasets = load_dataset("csv", data_files=data_files, cache_dir=data_args.dataset_cache_dir, lineterminator="\n")
 
     # count number of labels --> select dataset by index so that this works for training and testing
-    label_list = datasets[[key for key in datasets][0]].unique("label")
+    # PR CUSTOM: need to set fixed label list because some splits are so small that they only have one of two labels in them
+    label_list = [0, 1] #datasets[[key for key in datasets][0]].unique("label")
     label_list.sort()  # Sorting for determinism
     num_labels = len(label_list)
 
@@ -183,12 +185,11 @@ def main():
         cache_dir=model_args.cache_dir,
     )
 
-    # Padding strategy
+    # set padding strategy
     if data_args.pad_to_max_length:
         padding = "max_length"
     else:
-        # We will pad later, dynamically at batch creation, to the max sequence length in each batch
-        padding = False
+        padding = False # padding dynamically at batch creation, to the max sequence length in each batch
 
     # convert label to id.
     label_to_id = {v: i for i, v in enumerate(label_list)}
@@ -232,12 +233,10 @@ def main():
     # data collator will default to DataCollatorWithPadding, so we change it if we already did the padding.
     if data_args.pad_to_max_length:
         data_collator = default_data_collator
-    elif training_args.fp16:
-        data_collator = DataCollatorWithPadding(tokenizer, pad_to_multiple_of=8)
     else:
         data_collator = None
 
-    # initialize the Trainer
+    # initialize the trainer
     trainer = Trainer(
         model=model,
         args=training_args,
@@ -254,7 +253,7 @@ def main():
         train_result = trainer.train()
         metrics = train_result.metrics
 
-        trainer.save_model()  # Saves the tokenizer too for easy upload
+        trainer.save_model()  # saves model + tokenizer
 
         trainer.log_metrics("train", metrics)
         trainer.save_metrics("train", metrics)
@@ -283,13 +282,20 @@ def main():
         # get predictions on test set (includes gold label column)
         test_results=trainer.predict(test_dataset=datasets["test"]) 
 
-        # store gold labels and model predictions
+        # store gold labels and discrete model predictions
         labels = pd.DataFrame(test_results.label_ids, columns = ['label']).reset_index()
         predictions = pd.DataFrame(np.argmax(test_results.predictions, axis=1), columns = ['prediction']).reset_index()
         
+        export_df = labels.merge(predictions)
+
+        # if specified, also store prediction logits
+        if data_args.store_prediction_logits:
+            logits = pd.DataFrame(test_results.predictions, columns = ['logits']).reset_index()
+            export_df.merge(logits)
+
         # save to csv in specified path
         Path(data_args.test_results_dir).mkdir(parents=True, exist_ok=True)
-        labels.merge(predictions).to_csv(test_results_path, index = False)
+        export_df.to_csv(test_results_path, index = False)
     
     return 'completed finetuning'
 
