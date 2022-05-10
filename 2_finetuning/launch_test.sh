@@ -15,7 +15,7 @@ module purge
 module load Anaconda3/2020.11
 
 # activate the right conda environment
-source activate $DATA/conda-envs/lrh-env
+source activate $DATA/conda-elnvs/lrh-env
 
 # display GPU status (uncomment if using GPU)
 # nvidia-smi
