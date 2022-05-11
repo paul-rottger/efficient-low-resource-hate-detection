@@ -28,11 +28,12 @@ for dataset in bas19_es for19_pt ous19_fr ous19_ar san20_it; do
             --model_name_or_path $DATA/low-resource-hate/english-base-models/${basemodel}/ \
             --dataset_cache_dir $DATA/low-resource-hate/z_cache/datasets \
             --do_predict \
-            --store_prediction_logits \
+            --store_prediction_logits true\
             --test_file ${testpath} \
             --test_results_dir $DATA/low-resource-hate/0_data/2_active_learning/${dataset}_$(basename $testpath .csv) \
-            --test_results_name $(basename $modelpath).csv \
+            --test_results_name ${basemodel}.csv \
             --per_device_eval_batch_size 32 \
             --max_seq_length 128 \
             --output_dir .
+    done
 done
