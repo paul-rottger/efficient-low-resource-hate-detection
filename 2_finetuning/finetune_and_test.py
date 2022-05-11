@@ -289,7 +289,7 @@ def main():
         # if specified, also store prediction logits
         if data_args.store_prediction_logits:
             logits = pd.DataFrame(pd.Series(tuple(map(tuple, test_results.predictions))), columns = ['logits']).reset_index()
-            export_df.merge(logits)
+            export_df = export_df.merge(logits)
 
         # save to csv in specified path
         Path(data_args.test_results_dir).mkdir(parents=True, exist_ok=True)
