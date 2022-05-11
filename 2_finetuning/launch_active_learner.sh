@@ -19,7 +19,7 @@ module load Anaconda3/2020.11
 # activate the right conda environment
 source activate $DATA/conda-envs/lrh-env
 
-# Pick base model to then continue finetuning (-->FT2)
+# Pick base model to use as active learner
 basemodel="xlmt_dyn21_en_20000_rs1"
 
 for dataset in bas19_es for19_pt ous19_fr ous19_ar san20_it; do
@@ -30,7 +30,7 @@ for dataset in bas19_es for19_pt ous19_fr ous19_ar san20_it; do
             --do_predict \
             --store_prediction_logits true\
             --test_file ${testpath} \
-            --test_results_dir $DATA/low-resource-hate/0_data/2_active_learning/${dataset}_$(basename $testpath .csv) \
+            --test_results_dir $DATA/low-resource-hate/0_data/main/2_active_learning/${dataset}_$(basename $testpath .csv) \
             --test_results_name ${basemodel}.csv \
             --per_device_eval_batch_size 32 \
             --max_seq_length 128 \
