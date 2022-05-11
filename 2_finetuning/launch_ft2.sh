@@ -35,6 +35,7 @@ for dataset in bas19_es for19_pt ous19_fr ous19_ar san20_it; do
                 --num_train_epochs 5 \
                 --max_seq_length 128 \
                 --do_eval \
+                --per_device_eval_batch_size 16 \
                 --evaluation_strategy "epoch" \
                 --save_strategy "epoch" \
                 --save_total_limit 1 \

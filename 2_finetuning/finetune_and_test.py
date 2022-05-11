@@ -203,9 +203,7 @@ def main():
 
     def preprocess_function(examples):
         # tokenize the texts
-        args = (
-            (examples["text"],)
-        )
+        args = ((examples["text"],))
         result = tokenizer(*args, padding=padding, max_length=max_seq_length, truncation=True)
 
         # map labels to IDs
