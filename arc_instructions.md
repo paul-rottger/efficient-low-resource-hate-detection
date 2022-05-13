@@ -21,5 +21,5 @@ Show remaining storage: myquota
 #SBATCH --gres=gpu:1
 
 ### FILE TRANSFER
-scp -r sedm6193@gateway.arc.ox.ac.uk:/data/engs-hatespeech/sedm6193/low-resource-hate/results/ "/Users/paul/Documents/Uni/PhD - Oxford/0 - Thesis/0_Articles/6_Low Resource Hate Speech Detection/low-resource-hate-speech-detection/3_evaluation/"
+rsync -rP sedm6193@gateway.arc.ox.ac.uk:/data/engs-hatespeech/sedm6193/low-resource-hate/results/ "/Users/paul/Documents/Uni/PhD - Oxford/0 - Thesis/0_Articles/6_Low Resource Hate Speech Detection/low-resource-hate-speech-detection/3_evaluation/results"
 
