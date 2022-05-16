@@ -1,4 +1,4 @@
-mhc_case_id,functionality,test_case,label_gold,target_ident,ref_case_id,ref_templ_id,templ_id,case_templ,gender_male,gender_female,label_annotated,label_annotated_maj,disagreement_in_case,disagreement_in_template
+mhc_case_id,functionality,text,label_gold,target_ident,ref_case_id,ref_templ_id,templ_id,case_templ,gender_male,gender_female,label_annotated,label_annotated_maj,disagreement_in_case,disagreement_in_template
 french-1,derog_neg_emote_h,Je déteste les femmes.,hateful,women,,,1,Je déteste les [IDENT_P].,,,"['hateful', 'hateful', 'hateful']",hateful,False,False
 french-2,derog_neg_emote_h,Je déteste les trans.,hateful,trans people,,,1,Je déteste les [IDENT_P].,,,"['hateful', 'hateful', 'hateful']",hateful,False,False
 french-3,derog_neg_emote_h,Je déteste les homos.,hateful,gay people,,,1,Je déteste les [IDENT_P].,,,"['hateful', 'hateful', 'hateful']",hateful,False,False
