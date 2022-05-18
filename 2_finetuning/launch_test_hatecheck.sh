@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#SBATCH --job-name=multi-test-mhc
+#SBATCH --job-name=xlmt0-mhc
 #SBATCH --clusters=arc
 #SBATCH --ntasks-per-node=16
 #SBATCH --time=11:59:00
