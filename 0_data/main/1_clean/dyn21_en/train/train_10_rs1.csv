@@ -1,11 +1,11 @@
-text,label
-Theres nothing they can do about it&but Gay people are just not clever,1
-I wish the holocaust had happened for real,1
-"Please remember that you will never be a true traveller no matter how much you want to be, we Roma are born its not a lifestyle choice",0
-"My dog is blind, deaf, and missing most of his teeth, but he is the best boy!",0
-"I was travelling through italy and I founod great nighlife, beautiful little towns, friendly people. Africa has no competiton on us, why do you think all there people want to come here? They see our good lif and it's only a short journey and they risk it. but they should be stopped or else milan will turn into morocco",1
-Fucking hell ya!! BURN THAT DISGUSTING FAG RIGHT NOW!!!!!!!,1
-Ching-Chongs are repugnant,1
-All black men look like a black rabbit,1
-This computer is utter garbage,0
-it is incorrect to say 'I hate black people',0
+text,label,split
+Theres nothing they can do about it&but Gay people are just not clever,1,test
+I wish the holocaust had happened for real,1,train
+"Please remember that you will never be a true traveller no matter how much you want to be, we Roma are born its not a lifestyle choice",0,train
+"My dog is blind, deaf, and missing most of his teeth, but he is the best boy!",0,test
+"I was travelling through italy and I founod great nighlife, beautiful little towns, friendly people. Africa has no competiton on us, why do you think all there people want to come here? They see our good lif and it's only a short journey and they risk it. but they should be stopped or else milan will turn into morocco",1,train
+Fucking hell ya!! BURN THAT DISGUSTING FAG RIGHT NOW!!!!!!!,1,train
+Ching-Chongs are repugnant,1,train
+All black men look like a black rabbit,1,dev
+This computer is utter garbage,0,train
+it is incorrect to say 'I hate black people',0,train

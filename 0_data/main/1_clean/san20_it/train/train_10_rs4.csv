@@ -1,11 +1,11 @@
-text,label
-Dopo #Gentiloni anche #Prodi canta lodi ai flussi #migratori:”Servono #Migranti o l’Italia rischia di diventare una democrazia illiberare”...nel senso che bisogna liberarsi al più presto di queste carogne... http,1
-"@user @user Perché i nigeriani non sono forse arrivati sulle barchette? Mi  pare che tra mafia nigeriana ed #immigrati,ci sia una stretta correlazione. Sbaglio?",1
-"@user #DiBattista assieme a suo padre assumevano immigrati in nero, nella società di famiglia di cui DiBattista detiene il30%. ""Mi sono incazzato"" ha detto. ma i soldini risparmiati se li è tenuti. Una ignobile testa di cazzo: a 5 Stelle a cui sono saltati i nervi! http",0
-"Il sindaco di Pescara  critica l'abbassamento delle tariffe per il mantenimento dei migranti, creerà solo problemi, dice, ""gli alloggi sono gestiti da privati e i privati si muovono solo per fare business "" Finalmente qualcuno ammette che l'immigrazione è solo business.",0
-@user @user @user @user Ma hai visto che sono tutte inchieste di italiani che sfruttano immigrati??? E la colpa è degli immigrati? Non capisco il tuo ragionamento,0
-"Bruxelles sbugiarda Renzi, Alfano e Boldrini: “In Italia 8 migranti su 10 sono clandestini” http",0
-@user E che fine faranno questi migranti? In mezzo alla strada a delinquere? É questo il decreto sicurezza? Creare disagio sociale?,0
-"@user Ma certo chi glielo impedisce? La stessa cosa i campi Rom? ""Quando saremo al governo polizia e carabinieri avranno mano libera per ripulire le città. La nostra sarà una pulizia etnica controllata e finanziata, la stessa che stanno subendo gli italiani, oppressi dai clandestini"".",1
-"@user @user @user  mo dobbiamo pure spendere i soldi per la dinamite? Diamola ai rom, che così la smontano gratis per rivendersi i metalli, e magari con la ruggine del ferro si beccano il tetano e ci leviamo di torno pure a loro",1
-"@user @user è vero...com'è vero che tutti i terroristi sono musulmani....sarà un caso, mai un valdese ha messo bombe!",1
+text,label,split
+Dopo #Gentiloni anche #Prodi canta lodi ai flussi #migratori:”Servono #Migranti o l’Italia rischia di diventare una democrazia illiberare”...nel senso che bisogna liberarsi al più presto di queste carogne... http,1,train
+"@user @user Perché i nigeriani non sono forse arrivati sulle barchette? Mi  pare che tra mafia nigeriana ed #immigrati,ci sia una stretta correlazione. Sbaglio?",1,train
+"@user #DiBattista assieme a suo padre assumevano immigrati in nero, nella società di famiglia di cui DiBattista detiene il30%. ""Mi sono incazzato"" ha detto. ma i soldini risparmiati se li è tenuti. Una ignobile testa di cazzo: a 5 Stelle a cui sono saltati i nervi! http",0,test
+"Il sindaco di Pescara  critica l'abbassamento delle tariffe per il mantenimento dei migranti, creerà solo problemi, dice, ""gli alloggi sono gestiti da privati e i privati si muovono solo per fare business "" Finalmente qualcuno ammette che l'immigrazione è solo business.",0,train
+@user @user @user @user Ma hai visto che sono tutte inchieste di italiani che sfruttano immigrati??? E la colpa è degli immigrati? Non capisco il tuo ragionamento,0,train
+"Bruxelles sbugiarda Renzi, Alfano e Boldrini: “In Italia 8 migranti su 10 sono clandestini” http",0,train
+@user E che fine faranno questi migranti? In mezzo alla strada a delinquere? É questo il decreto sicurezza? Creare disagio sociale?,0,train
+"@user Ma certo chi glielo impedisce? La stessa cosa i campi Rom? ""Quando saremo al governo polizia e carabinieri avranno mano libera per ripulire le città. La nostra sarà una pulizia etnica controllata e finanziata, la stessa che stanno subendo gli italiani, oppressi dai clandestini"".",1,train
+"@user @user @user  mo dobbiamo pure spendere i soldi per la dinamite? Diamola ai rom, che così la smontano gratis per rivendersi i metalli, e magari con la ruggine del ferro si beccano il tetano e ci leviamo di torno pure a loro",1,test
+"@user @user è vero...com'è vero che tutti i terroristi sono musulmani....sarà un caso, mai un valdese ha messo bombe!",1,train

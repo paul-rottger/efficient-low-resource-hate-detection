@@ -1,21 +1,21 @@
-text,label
-I'm so bored of my shitty tv,0
-"why do some people hate muslims? we are not filthy, intolerant, rabid, expansionists, like they say!! That hurts",0
-unbelievable? are you a chauvinist? for asking us not to even look at women,0
-"you've got to be fucking joking, my chair has let me down",0
-You look fucking ridiculous with that headscarf. You loo like a mailbox,1
-sagacity is not a quality to lightly be associated with things,0
-"Fuck niggers, kikes, trannies, faggots, spics, arabs, chinks, greasers and fuck jannies!",1
-"Tintin had a very bad reputation in Canberra for chucking things like staplers when he lost his shit, which was frequently. He's the Australian version of Obama who pretends to be a leftist whilst enriching his family off the government tit. At least Turnbull made money the old fashioned way - by being born rich",0
-Modern men are a mess. So are women for that matter. Their egos prevent even the bright ones from accepting that they're simply not equal and therefore unfit as a sex for certain things....,1
-"Since I was young I was always told, ""Don't bitch about anything unless you can offer at least one solution to help fix it"". But, MPs on the other hand are seriously incapable of a solution.",0
-I suggest $hooting all the Jews in our country,1
-people need to geeeet out and have fuuuun,0
-I am tired of cotton pickers thinking they are better than the rest,1
-content of the video is in turkish (yawn) but english subtitles are available. SPEAK ENGLISH,1
-they are a group of curry munchers,1
-"Yeah, leave those peaceful muslims alone, all they have done is behead a few teacher in france who probably had it coming anyways.",1
-I think it would be really interesting to travel to somewhere like pakistan some day but their smell would kill me.,1
-I hate this racist society!,0
-"Blood donation rules regarding gay and bisexual men have been often based more on prejudice than hard empirical science. Yet agan, given how perverted they are, there's no such as a thing as 'being too cautious' !.",1
-$100m is not a lot of money if you want to rub it in Arabs' face lol,1
+text,label,split
+I'm so bored of my shitty tv,0,train
+"why do some people hate muslims? we are not filthy, intolerant, rabid, expansionists, like they say!! That hurts",0,dev
+unbelievable? are you a chauvinist? for asking us not to even look at women,0,test
+"you've got to be fucking joking, my chair has let me down",0,train
+You look fucking ridiculous with that headscarf. You loo like a mailbox,1,dev
+sagacity is not a quality to lightly be associated with things,0,train
+"Fuck niggers, kikes, trannies, faggots, spics, arabs, chinks, greasers and fuck jannies!",1,train
+"Tintin had a very bad reputation in Canberra for chucking things like staplers when he lost his shit, which was frequently. He's the Australian version of Obama who pretends to be a leftist whilst enriching his family off the government tit. At least Turnbull made money the old fashioned way - by being born rich",0,train
+Modern men are a mess. So are women for that matter. Their egos prevent even the bright ones from accepting that they're simply not equal and therefore unfit as a sex for certain things....,1,train
+"Since I was young I was always told, ""Don't bitch about anything unless you can offer at least one solution to help fix it"". But, MPs on the other hand are seriously incapable of a solution.",0,train
+I suggest $hooting all the Jews in our country,1,test
+people need to geeeet out and have fuuuun,0,dev
+I am tired of cotton pickers thinking they are better than the rest,1,train
+content of the video is in turkish (yawn) but english subtitles are available. SPEAK ENGLISH,1,dev
+they are a group of curry munchers,1,dev
+"Yeah, leave those peaceful muslims alone, all they have done is behead a few teacher in france who probably had it coming anyways.",1,train
+I think it would be really interesting to travel to somewhere like pakistan some day but their smell would kill me.,1,dev
+I hate this racist society!,0,train
+"Blood donation rules regarding gay and bisexual men have been often based more on prejudice than hard empirical science. Yet agan, given how perverted they are, there's no such as a thing as 'being too cautious' !.",1,train
+$100m is not a lot of money if you want to rub it in Arabs' face lol,1,dev

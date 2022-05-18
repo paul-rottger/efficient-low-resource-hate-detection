@@ -1,11 +1,11 @@
-text,label
-"Atei, omosessuali, donne non ubbidienti e sottomesse, democratici e libertari a morte! Cosa è nazismo? Fascismo? No semplicemente #ISLAM P.S. Ti ammazzano anche se gli baci i piedi, #Bergoglio  http",1
-"Alle prime due ore abbiamo discusso con le prof riguardo l’immigrazione e adesso ci sarà un incontro con alcuni ragazzi immigrati e questa cosa è stupenda, peccato ci siano anche xenofobi e razzisti in generale in sta cazzo di scuola",0
-"@user Altro che #ruspe, in #galera !!!  Don Ernesto - ""Ho capito anche io che questa categoria di persone è ingestibile""  #Racket delle elemosine a #Roma: parroco minacciato denuncia #rom http",1
-"Buon Natale agli operai magiari, austriaci e padani che i sovranisti vorrebbero far lavorare 12 ore al giorno. E ai migranti africani che vorrebbero tutti morti in fondo al mare. Caffè http @user @user @user @user @user",0
-"Modena, festa della donna islamica velata (e sottomessa): ospiti Cgil, Fiom e assessore del PD: http",1
-Freddo e fame: è questa la risposta di Roma ai migranti della zona Tiburtina? http,0
-"@user @user @user @user @user @user @user sí, TgCOM si ""scorda"" di dire che il GIP ha giá escluso le ipotesi di reato iniziali riguardo i fondi per migranti, e che l'arresto é per un matrimonio combinato e presunte irregolaritá nell'affidamento della gestione rifiuti. propongo multa da pagare in 80 anni.",0
-"Signora Rosaria, grazie per la Sua lucidità e il Suo coraggio.   Napoli: ecco la donna che ha difeso gli immigrati dall'aggressione razzista http",0
-"Roma, scatta l’allerta terrorismo ma fanno più paura i black bloc  http http",0
-"Ma secondo te un disperato che scappa da torture e povertà si ferma di fronte al ""blocco navale""?! Persone che dicono di preferire la morte al ritorno in Libia...A voi non ve ne frega dei migranti.  Le partenze non si fermano. Mettititelo in testa.",0
+text,label,split
+"Atei, omosessuali, donne non ubbidienti e sottomesse, democratici e libertari a morte! Cosa è nazismo? Fascismo? No semplicemente #ISLAM P.S. Ti ammazzano anche se gli baci i piedi, #Bergoglio  http",1,test
+"Alle prime due ore abbiamo discusso con le prof riguardo l’immigrazione e adesso ci sarà un incontro con alcuni ragazzi immigrati e questa cosa è stupenda, peccato ci siano anche xenofobi e razzisti in generale in sta cazzo di scuola",0,test
+"@user Altro che #ruspe, in #galera !!!  Don Ernesto - ""Ho capito anche io che questa categoria di persone è ingestibile""  #Racket delle elemosine a #Roma: parroco minacciato denuncia #rom http",1,train
+"Buon Natale agli operai magiari, austriaci e padani che i sovranisti vorrebbero far lavorare 12 ore al giorno. E ai migranti africani che vorrebbero tutti morti in fondo al mare. Caffè http @user @user @user @user @user",0,train
+"Modena, festa della donna islamica velata (e sottomessa): ospiti Cgil, Fiom e assessore del PD: http",1,train
+Freddo e fame: è questa la risposta di Roma ai migranti della zona Tiburtina? http,0,train
+"@user @user @user @user @user @user @user sí, TgCOM si ""scorda"" di dire che il GIP ha giá escluso le ipotesi di reato iniziali riguardo i fondi per migranti, e che l'arresto é per un matrimonio combinato e presunte irregolaritá nell'affidamento della gestione rifiuti. propongo multa da pagare in 80 anni.",0,train
+"Signora Rosaria, grazie per la Sua lucidità e il Suo coraggio.   Napoli: ecco la donna che ha difeso gli immigrati dall'aggressione razzista http",0,train
+"Roma, scatta l’allerta terrorismo ma fanno più paura i black bloc  http http",0,train
+"Ma secondo te un disperato che scappa da torture e povertà si ferma di fronte al ""blocco navale""?! Persone che dicono di preferire la morte al ritorno in Libia...A voi non ve ne frega dei migranti.  Le partenze non si fermano. Mettititelo in testa.",0,test

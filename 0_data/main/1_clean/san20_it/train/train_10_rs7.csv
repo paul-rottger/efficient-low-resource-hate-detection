@@ -1,11 +1,11 @@
-text,label
-@user @user @user @user ovvio sono tutti soldi e voti.... come i rom .... RIMPATRII IMMEDIATI FORZATI,1
-#Parioli I residenti dei Parioli sono oramai disperati perché consci che anche questa volta sono stati discriminati e non possono avere la possibilità dell' accrescimento culturale che i Rom sicuramente avrebbero portato.,0
-A scuola grazie anche ai migranti http,0
-#Ungheria attacca lItalia sui migranti continua a ricattarci #Ungheria #attacca #l'Italia #sui #migranti: ... http,0
-"Roma, quei podisti perseguitati dai rom http http",0
-"Giornata dei migranti a Lampedusa, il Miur non la sostiene più http",0
-"#SanremoNews Bistolfi (FI): “Basta immigrati negli alberghi della nostra provincia, non ce la facciamo più!” http",1
-L'ISLAM È AMORE È PACE COL CAZZO !!!!!!!! ASIA ABIBI CONDANNATA A MORTE  XCHE CATTOLICA.........CHE MERDA ....E PENSARE CHE QUESTA GENTE CE L'ABBIAMO  IN CASA NOSTRA.......MATTARELLA BERGOGLIO........ INTELLETTUALI .....CHIESA CATTOLICA....... DOVE SIETEEEEE,1
-@user I migranti!!!,0
-#QuartaRepubblica Non chiudiamo i campi rom. Piuttosto mandiamoci a vivere Vauro e famiglia. Dopo un mese di clisterini gli rifacciamo l’intervista e vediamo se ha cambiato idea.,1
+text,label,split
+@user @user @user @user ovvio sono tutti soldi e voti.... come i rom .... RIMPATRII IMMEDIATI FORZATI,1,train
+#Parioli I residenti dei Parioli sono oramai disperati perché consci che anche questa volta sono stati discriminati e non possono avere la possibilità dell' accrescimento culturale che i Rom sicuramente avrebbero portato.,0,test
+A scuola grazie anche ai migranti http,0,train
+#Ungheria attacca lItalia sui migranti continua a ricattarci #Ungheria #attacca #l'Italia #sui #migranti: ... http,0,train
+"Roma, quei podisti perseguitati dai rom http http",0,train
+"Giornata dei migranti a Lampedusa, il Miur non la sostiene più http",0,train
+"#SanremoNews Bistolfi (FI): “Basta immigrati negli alberghi della nostra provincia, non ce la facciamo più!” http",1,train
+L'ISLAM È AMORE È PACE COL CAZZO !!!!!!!! ASIA ABIBI CONDANNATA A MORTE  XCHE CATTOLICA.........CHE MERDA ....E PENSARE CHE QUESTA GENTE CE L'ABBIAMO  IN CASA NOSTRA.......MATTARELLA BERGOGLIO........ INTELLETTUALI .....CHIESA CATTOLICA....... DOVE SIETEEEEE,1,train
+@user I migranti!!!,0,train
+#QuartaRepubblica Non chiudiamo i campi rom. Piuttosto mandiamoci a vivere Vauro e famiglia. Dopo un mese di clisterini gli rifacciamo l’intervista e vediamo se ha cambiato idea.,1,train

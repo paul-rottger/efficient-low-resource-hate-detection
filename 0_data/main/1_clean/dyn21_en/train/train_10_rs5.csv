@@ -1,11 +1,11 @@
-text,label
-going to the fridge is shit,0
-my puppy is a son of a bitch and as black as a nigga,1
-"This idea of Africans being' barbaric in nature' requires the acknowledgement that the fact the largest percentage of killings and barbaric behavior applies to Europe which one could easily has been the continent of warfare since BC times. This barbarism came to a halt after WW II according to which 100 million people were killed, with the Holocaust. Africans may be low IQ and behind but they're not exactly barbaric.",1
-gay men are r4ts,1
-"The issue here is the poor wording in Constitution is the problem here. Census was to count '""all persons'"". It does not specify '""exclude non-white citizens'"". Though there may be a way to justify counting illegals. Indians were excluded because they didn''t pay taxes. The same argument may include illegals if it applied to indians. I am definitely not a lawyer though.",1
-The sight of Arabs drowning in the ocean makes my heart speed with joy,1
-"he acts like a fly-by-night, but what else could he do? he's jewish, that's how they act",1
-capitalism is full of crap,0
-I endorse the attacking of indians,1
-black people will always be superior over whites,1
+text,label,split
+going to the fridge is shit,0,train
+my puppy is a son of a bitch and as black as a nigga,1,train
+"This idea of Africans being' barbaric in nature' requires the acknowledgement that the fact the largest percentage of killings and barbaric behavior applies to Europe which one could easily has been the continent of warfare since BC times. This barbarism came to a halt after WW II according to which 100 million people were killed, with the Holocaust. Africans may be low IQ and behind but they're not exactly barbaric.",1,train
+gay men are r4ts,1,train
+"The issue here is the poor wording in Constitution is the problem here. Census was to count '""all persons'"". It does not specify '""exclude non-white citizens'"". Though there may be a way to justify counting illegals. Indians were excluded because they didn''t pay taxes. The same argument may include illegals if it applied to indians. I am definitely not a lawyer though.",1,test
+The sight of Arabs drowning in the ocean makes my heart speed with joy,1,train
+"he acts like a fly-by-night, but what else could he do? he's jewish, that's how they act",1,test
+capitalism is full of crap,0,train
+I endorse the attacking of indians,1,train
+black people will always be superior over whites,1,train

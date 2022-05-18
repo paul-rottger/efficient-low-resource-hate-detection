@@ -1,11 +1,11 @@
-text,label
-Lesbos are worse than snakes,1
-Blacks are great.... at being everywhere! It's like the plague!,1
-"Women just say shit that makes them feel positive about themselves without regard to the meaning of words. There are plenty more examples: strong, independent, etc.  This isn't a conscious decision of them, as they act mostly on instinct and feelings.",1
-"This guy cherrypicks and guides his ""interview"" like crazy. Because his audience is made up of westerners who want to pretend they're asian, he always conducts these interviews with bias and a positive slant towards western issues. Gooks in particular are racist as fuck towards afros.",1
-what makes muslim women from the west get put off from marrying men from the middle east? I'm confused....isn't that where they are from anyway?,0
-"We're a small island, we can't support all these Indians",1
-dykes are repellent,1
-I wouldn't eat food that has been touched by a handicapped person,1
-i would never work for the money hungry HMRC,0
-Down with Mussies,1
+text,label,split
+Lesbos are worse than snakes,1,dev
+Blacks are great.... at being everywhere! It's like the plague!,1,train
+"Women just say shit that makes them feel positive about themselves without regard to the meaning of words. There are plenty more examples: strong, independent, etc.  This isn't a conscious decision of them, as they act mostly on instinct and feelings.",1,train
+"This guy cherrypicks and guides his ""interview"" like crazy. Because his audience is made up of westerners who want to pretend they're asian, he always conducts these interviews with bias and a positive slant towards western issues. Gooks in particular are racist as fuck towards afros.",1,train
+what makes muslim women from the west get put off from marrying men from the middle east? I'm confused....isn't that where they are from anyway?,0,train
+"We're a small island, we can't support all these Indians",1,train
+dykes are repellent,1,train
+I wouldn't eat food that has been touched by a handicapped person,1,train
+i would never work for the money hungry HMRC,0,train
+Down with Mussies,1,train

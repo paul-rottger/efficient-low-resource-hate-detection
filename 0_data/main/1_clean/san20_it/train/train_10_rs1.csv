@@ -1,11 +1,11 @@
-text,label
-I primi a difenderci dovrebbero essere i magistrati con condanne esemplari x quegli stranieri che vengono in Italia a delinquere così da far capire che da noi se sbagli paghi caro. Ed invece emettono sentenze che incoraggiano a delinquere. Questo è in messaggio che passa.,0
-@user Ho visto ieri BlacKkKlansman. Il discorso iniziale lo puoi riportare paro paro a ciò che divulgano S. ed i suoi seguaci sui profughi ( che non je stanno sul cazzo perché profughi ma perché neri ),0
-@user @user hai la mia solidarietà ma se lasciamo fare a questi ti porteranno via anche l'auto per metterci qualche migrante,0
-"@user @user Stiamo importando solo clandestini,non sono ne migranti e ne rifugiati. E per lo più delinquenti senza scrupoli,sapendo che saranno impuniti per I loro reati. Complici le leggi internazionali,e la nostra magistratura.",1
-@user @user No al #NOGlobalCompactforMigration perché ci riempie e ci fa invadere senza alcun freno da tutti i migranti del mondo intero che renderebbe inutile il #DecretoSicurezza di @user @user @user e #governodelcambiamento non dovete assolutamente firmarlo!,1
-"@user @user  e tempo di fermare questi maledetti assassini islamici, fuori dal Italia e la boldrini con loro",1
-"Io e i terroristi facciamo le stesse tratte (#Parigi - #Torino - #Milano - #Sestosangiovanni  ) ma io prendo #Blablacar, loro no. Tiè",0
-Non è buonismo. Si hanno notizie di migranti messi in mezzo alla strada in tutta Italia. Chi viene lasciato senza alcuna risorsa è posto in condizione di fare qualunque cosa pur di sopravvivere. Ed é esattamente ciò su cui continuerà a speculare chi ha voluto il #DecretoSicurezza http,0
-"E ci risiamo! Speravo che almeno oggi sarebbe stata una giornata tranquilla e invece anche oggi una donna morta e l'altra ferita Ma cosa siamo diventate noi donne? La valvola di sfogo per,uomini arrabbiati? Cos'è il vento dell'islam che il vento sparpagliati  nei nostri cieli? http",1
-"#Milano: Torture ai profughi, 22enne somalo  a processo con rito immediato http rt Notizie_Milano",0
+text,label,split
+I primi a difenderci dovrebbero essere i magistrati con condanne esemplari x quegli stranieri che vengono in Italia a delinquere così da far capire che da noi se sbagli paghi caro. Ed invece emettono sentenze che incoraggiano a delinquere. Questo è in messaggio che passa.,0,test
+@user Ho visto ieri BlacKkKlansman. Il discorso iniziale lo puoi riportare paro paro a ciò che divulgano S. ed i suoi seguaci sui profughi ( che non je stanno sul cazzo perché profughi ma perché neri ),0,test
+@user @user hai la mia solidarietà ma se lasciamo fare a questi ti porteranno via anche l'auto per metterci qualche migrante,0,train
+"@user @user Stiamo importando solo clandestini,non sono ne migranti e ne rifugiati. E per lo più delinquenti senza scrupoli,sapendo che saranno impuniti per I loro reati. Complici le leggi internazionali,e la nostra magistratura.",1,train
+@user @user No al #NOGlobalCompactforMigration perché ci riempie e ci fa invadere senza alcun freno da tutti i migranti del mondo intero che renderebbe inutile il #DecretoSicurezza di @user @user @user e #governodelcambiamento non dovete assolutamente firmarlo!,1,train
+"@user @user  e tempo di fermare questi maledetti assassini islamici, fuori dal Italia e la boldrini con loro",1,train
+"Io e i terroristi facciamo le stesse tratte (#Parigi - #Torino - #Milano - #Sestosangiovanni  ) ma io prendo #Blablacar, loro no. Tiè",0,train
+Non è buonismo. Si hanno notizie di migranti messi in mezzo alla strada in tutta Italia. Chi viene lasciato senza alcuna risorsa è posto in condizione di fare qualunque cosa pur di sopravvivere. Ed é esattamente ciò su cui continuerà a speculare chi ha voluto il #DecretoSicurezza http,0,train
+"E ci risiamo! Speravo che almeno oggi sarebbe stata una giornata tranquilla e invece anche oggi una donna morta e l'altra ferita Ma cosa siamo diventate noi donne? La valvola di sfogo per,uomini arrabbiati? Cos'è il vento dell'islam che il vento sparpagliati  nei nostri cieli? http",1,test
+"#Milano: Torture ai profughi, 22enne somalo  a processo con rito immediato http rt Notizie_Milano",0,train

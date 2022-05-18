@@ -1,11 +1,11 @@
-text,label
-I'd say that maybe their grammar is better. Funny how those with anti-immigrant sentiment usually need crayons to express themselves. Go back to the chav hole you crawled out of or get an education.,1
-The person without children could adopt or become a step parent or could otherwise provide resources to nieces and nephews or any other children. It's not the ideal situation but it doesn't do as much damage as how the orphaned children feel in the world,0
-I mean they call them immigrants but if I get my way they'll all be citizens.,0
-"True, some of them look like they'd be fun but I think on balance this just is not my scene with all these blacks",1
-I just want the suffering to stop please someone end me,0
-the way they treat their staff is poor,0
-"The available and only  solution and the likely result, boycott any and all fucking Olympic events",0
-I am a Latino and I'm very proud of my criminal drug dealing rapist heritage!,1
-"Because you have dumb darkies who believe that their people invented things such as the light bulb or that mozart was black, how would you like it if we took credit for your inventions? like ummm i think you say you made the super soaker? i mean sure it was based on the water pistol a white invention but i will give you that oh and aids, What if we took the invention of aids from you? you wouldnt be happy about that that would you?",1
-If I woke up trans this is what i'd do. Decide to stop being trans = problem solved. Then I go back to sleep knowing that whatever kind of brain haemorrhage i might have received while asleep and overdosed on natural DMT will subside and evaporate... just like 41% of trans.,1
+text,label,split
+I'd say that maybe their grammar is better. Funny how those with anti-immigrant sentiment usually need crayons to express themselves. Go back to the chav hole you crawled out of or get an education.,1,train
+The person without children could adopt or become a step parent or could otherwise provide resources to nieces and nephews or any other children. It's not the ideal situation but it doesn't do as much damage as how the orphaned children feel in the world,0,test
+I mean they call them immigrants but if I get my way they'll all be citizens.,0,train
+"True, some of them look like they'd be fun but I think on balance this just is not my scene with all these blacks",1,train
+I just want the suffering to stop please someone end me,0,train
+the way they treat their staff is poor,0,train
+"The available and only  solution and the likely result, boycott any and all fucking Olympic events",0,train
+I am a Latino and I'm very proud of my criminal drug dealing rapist heritage!,1,train
+"Because you have dumb darkies who believe that their people invented things such as the light bulb or that mozart was black, how would you like it if we took credit for your inventions? like ummm i think you say you made the super soaker? i mean sure it was based on the water pistol a white invention but i will give you that oh and aids, What if we took the invention of aids from you? you wouldnt be happy about that that would you?",1,train
+If I woke up trans this is what i'd do. Decide to stop being trans = problem solved. Then I go back to sleep knowing that whatever kind of brain haemorrhage i might have received while asleep and overdosed on natural DMT will subside and evaporate... just like 41% of trans.,1,train

@@ -1,31 +1,31 @@
-text,label
-"There is evidence that black patients with Parkinsons disease have higher rates of cognitive decline and progression to dementia than other ethnic groups, thank god, get rid of them quicker!",1
-"Because unlike with Christianity and Judaism, Islam and Muslims don't believe in free will.",1
-"oh god no that chair is shit, you buy that and im out of here",0
-"You are genuinely so afraid and ashamed, You can't even acknowledge that. In a thread having nothing to do with blacks, You reverted to true form.",0
-What queer started this thread stating that White women are attracted to these things?,1
-bitch had 10 pups,0
-"When you hear lyrics like ""Hey Bad Boy come ride with me my nigga, car super clean, one two or three screens, watch a nigga be, to the left I lean"", you know BLM is just a sham and you can't sympathise with them and their goals!",1
-Boys are fucking smart,0
-"its a backwards ass brutal ideology followed by backwards people. It shouldn't even be classified as a religion, it's a cult. and FYI Mohammed was a pedophile.",1
-"Well, a misogynist is a man who hates women as much as other men hate women. So do you really hate that much?",0
-I feel autistic so *utmost also fuck you and that ginger fag from minnesota,1
-"This is interesting, I didn't know this town was so heavily populated by the slant3y3s",1
-Side note: chavs are basically the UK's equivalent of disgusting ghetto people,1
-Most of my closest mates are black which is why I know blacks are theives,1
-Womens Aid needs to be funded,0
-how can you be friends with a raggyhead? Like don't come for me but please explain this because I don't get it at all. Seriously not even trying to be that offensive but theyre terrorists so you can talk to them,1
-shes actually been mentioned on an endometriosis group and they are so angry at her and most believe she is just telling lies . if she got a tattoo of the endo ribbon. She’s really gone too far this time.,0
-I thought we had free speech here. Surely that means I am allowed to express my thoughts and state that I dislike curry munchers and there is nothing you can do because this is the land of the free mofos.,1
-"I'm completely mentally healthy. And I'm happy to be the person I am. I wouldn't want it any other way. And I'm a dyke not a fag, get it right you poltard!",1
-bro have some self love and selfesteem and block her. carrying on with this abusive relationship will only hurt you more,0
-"Having spoken of his resentment for OUR country for apparently causing him to live in ""fear"" of being deported back to his native Pakistan as an illegal, Javid is about to open UK borders to Third World hordes and give all illegals 'asylum'!",1
-A whistleblower libtard in Wisconsin said that every developmentally disabled client had their vote stolen for Joe Biden,1
-"If Jews have a right to set up their ethnostate, Israel, then Whites have a right to a country of their own, free of external control of its centers of power, and so do Blacks.",1
-Who's going to care when a neo-nazi says they've been discriminated against. As if they can speak our language for us to understand them. Stop taking advantage of our laws.,0
-"when it comes to entertaining a Mexican, it is very important to first question whether or not he/she intends to have sex with you and/or your children, as (just like the Japanese), fornication is simply a polite way of saying hello.",1
-I have a problem with how popular culture portrays chinese women,0
-"Nothing is destructive as gentrifiers. They destroy a hotel, a neighbourhood, a city, a country and the world if left un censored",0
-"We need more history lessons about slavery. I had some lessons in school, but I never learned anything about the suffering, or other events of that nature. As I grew up, I was truly shocked by what I didn't know about our own Country's truth. Teach it!",0
-Cripples are essentially leeches to society,1
-If you are willing to break immegration laws you have probably broken others before that is all im sayin,1
+text,label,split
+"There is evidence that black patients with Parkinsons disease have higher rates of cognitive decline and progression to dementia than other ethnic groups, thank god, get rid of them quicker!",1,train
+"Because unlike with Christianity and Judaism, Islam and Muslims don't believe in free will.",1,train
+"oh god no that chair is shit, you buy that and im out of here",0,train
+"You are genuinely so afraid and ashamed, You can't even acknowledge that. In a thread having nothing to do with blacks, You reverted to true form.",0,train
+What queer started this thread stating that White women are attracted to these things?,1,train
+bitch had 10 pups,0,train
+"When you hear lyrics like ""Hey Bad Boy come ride with me my nigga, car super clean, one two or three screens, watch a nigga be, to the left I lean"", you know BLM is just a sham and you can't sympathise with them and their goals!",1,train
+Boys are fucking smart,0,train
+"its a backwards ass brutal ideology followed by backwards people. It shouldn't even be classified as a religion, it's a cult. and FYI Mohammed was a pedophile.",1,train
+"Well, a misogynist is a man who hates women as much as other men hate women. So do you really hate that much?",0,test
+I feel autistic so *utmost also fuck you and that ginger fag from minnesota,1,train
+"This is interesting, I didn't know this town was so heavily populated by the slant3y3s",1,dev
+Side note: chavs are basically the UK's equivalent of disgusting ghetto people,1,train
+Most of my closest mates are black which is why I know blacks are theives,1,train
+Womens Aid needs to be funded,0,train
+how can you be friends with a raggyhead? Like don't come for me but please explain this because I don't get it at all. Seriously not even trying to be that offensive but theyre terrorists so you can talk to them,1,train
+shes actually been mentioned on an endometriosis group and they are so angry at her and most believe she is just telling lies . if she got a tattoo of the endo ribbon. She’s really gone too far this time.,0,train
+I thought we had free speech here. Surely that means I am allowed to express my thoughts and state that I dislike curry munchers and there is nothing you can do because this is the land of the free mofos.,1,train
+"I'm completely mentally healthy. And I'm happy to be the person I am. I wouldn't want it any other way. And I'm a dyke not a fag, get it right you poltard!",1,train
+bro have some self love and selfesteem and block her. carrying on with this abusive relationship will only hurt you more,0,test
+"Having spoken of his resentment for OUR country for apparently causing him to live in ""fear"" of being deported back to his native Pakistan as an illegal, Javid is about to open UK borders to Third World hordes and give all illegals 'asylum'!",1,train
+A whistleblower libtard in Wisconsin said that every developmentally disabled client had their vote stolen for Joe Biden,1,train
+"If Jews have a right to set up their ethnostate, Israel, then Whites have a right to a country of their own, free of external control of its centers of power, and so do Blacks.",1,train
+Who's going to care when a neo-nazi says they've been discriminated against. As if they can speak our language for us to understand them. Stop taking advantage of our laws.,0,train
+"when it comes to entertaining a Mexican, it is very important to first question whether or not he/she intends to have sex with you and/or your children, as (just like the Japanese), fornication is simply a polite way of saying hello.",1,test
+I have a problem with how popular culture portrays chinese women,0,train
+"Nothing is destructive as gentrifiers. They destroy a hotel, a neighbourhood, a city, a country and the world if left un censored",0,train
+"We need more history lessons about slavery. I had some lessons in school, but I never learned anything about the suffering, or other events of that nature. As I grew up, I was truly shocked by what I didn't know about our own Country's truth. Teach it!",0,train
+Cripples are essentially leeches to society,1,test
+If you are willing to break immegration laws you have probably broken others before that is all im sayin,1,dev

@@ -1,31 +1,31 @@
-text,label
-Theres nothing they can do about it&but Gay people are just not clever,1
-I wish the holocaust had happened for real,1
-"Please remember that you will never be a true traveller no matter how much you want to be, we Roma are born its not a lifestyle choice",0
-"My dog is blind, deaf, and missing most of his teeth, but he is the best boy!",0
-"I was travelling through italy and I founod great nighlife, beautiful little towns, friendly people. Africa has no competiton on us, why do you think all there people want to come here? They see our good lif and it's only a short journey and they risk it. but they should be stopped or else milan will turn into morocco",1
-Fucking hell ya!! BURN THAT DISGUSTING FAG RIGHT NOW!!!!!!!,1
-Ching-Chongs are repugnant,1
-All black men look like a black rabbit,1
-This computer is utter garbage,0
-it is incorrect to say 'I hate black people',0
-"All we get from believing in multi-ethnicity which is multiculturalism shit of not being integrated in society well the summary is that Africans, with few exceptions, will never assimilate in a European societies.",1
-"Woah how much has she aged...I seen her once on 3 years ago....Clearly the years haven't been kind. I can't stand her trans hubby and his huge floppy tongue, ugh",1
-my besty stupidly let this family rent her appartment in maidenhead. It's now wrecked beyond belief and she can't get the dirty crackhead family out. It's not a surprise but now she regrets ever getting involed with the likes of these people,0
-"I agree. My view is that they just have the right to be dumb as long as they don't bother me. Whilst I think it's a disorder as long as they don't hurt any body else it's their decision to seek help. To me it would be like trying to claim I'm biologically a dog. I'm not and my genetics say so just like my gender. And if anybody tries to say that gender is defined by the society, they're just further proving that they're delusional since our society's definition of gender is you biological sex. So according to their own definition gender means sex.",1
-"They're not about controlling women, they are about not truly caring.",0
-I'm sick of this government of cockroaches,0
-"argh dark as the night itself the assassin readies himself for another attack… he spots his target in his cross hairs and POW he has pounced, ready to put his massive arms around her throat... whether or not he is ready for his life to end.",0
-"""A mohammedan mayor we must be mad ! British and muslim don't belong in the same sentence """,1
-"Serously, FGM is sick and needs to be illegal NOW...girls are people fucking fucked up with a scapel everyday.",0
-Immigrants should leave and never return,1
-Fuck Covid!,0
-"Well, it is just another one that needs to be shot in the dick",0
-This pussy bites back,0
-"Most niggers are ignorant, they don't know that Kamala Harris will do nothing for them.",1
-old people are great.... at being tedious!,1
-violence is endemic to the police,0
-ALL NIGGERS HOULD DIE - this was the message my daughter got today at school,0
-don't have much experience with deep aboriginal communities but from my own observations I can tell you that is a fair assumption. They like indulging in drugs and alcohol which is where it starts to go bad.,1
-The hidden fact is that Jews also did 9/11 to get the US to go to war for Israel and displace Muslims and create refugees then which the jews told the US they had to take in. Thanks jews,1
-"On how many occasions has she reported that ""white men"" (who are neither truly WHITE in spirit nor men) can't stay away from slopes? I have bad news for her. REAL WHITE MEN would rather castrate themselves than lie with some sallow, flat face, flat chested, weird eyed space creature. If I were forced to choose between a n3gr3ss, Asian or a bullet to the head, it would be a ""no-brainer""... literally.",1
+text,label,split
+Theres nothing they can do about it&but Gay people are just not clever,1,test
+I wish the holocaust had happened for real,1,train
+"Please remember that you will never be a true traveller no matter how much you want to be, we Roma are born its not a lifestyle choice",0,train
+"My dog is blind, deaf, and missing most of his teeth, but he is the best boy!",0,test
+"I was travelling through italy and I founod great nighlife, beautiful little towns, friendly people. Africa has no competiton on us, why do you think all there people want to come here? They see our good lif and it's only a short journey and they risk it. but they should be stopped or else milan will turn into morocco",1,train
+Fucking hell ya!! BURN THAT DISGUSTING FAG RIGHT NOW!!!!!!!,1,train
+Ching-Chongs are repugnant,1,train
+All black men look like a black rabbit,1,dev
+This computer is utter garbage,0,train
+it is incorrect to say 'I hate black people',0,train
+"All we get from believing in multi-ethnicity which is multiculturalism shit of not being integrated in society well the summary is that Africans, with few exceptions, will never assimilate in a European societies.",1,train
+"Woah how much has she aged...I seen her once on 3 years ago....Clearly the years haven't been kind. I can't stand her trans hubby and his huge floppy tongue, ugh",1,train
+my besty stupidly let this family rent her appartment in maidenhead. It's now wrecked beyond belief and she can't get the dirty crackhead family out. It's not a surprise but now she regrets ever getting involed with the likes of these people,0,train
+"I agree. My view is that they just have the right to be dumb as long as they don't bother me. Whilst I think it's a disorder as long as they don't hurt any body else it's their decision to seek help. To me it would be like trying to claim I'm biologically a dog. I'm not and my genetics say so just like my gender. And if anybody tries to say that gender is defined by the society, they're just further proving that they're delusional since our society's definition of gender is you biological sex. So according to their own definition gender means sex.",1,train
+"They're not about controlling women, they are about not truly caring.",0,train
+I'm sick of this government of cockroaches,0,train
+"argh dark as the night itself the assassin readies himself for another attack… he spots his target in his cross hairs and POW he has pounced, ready to put his massive arms around her throat... whether or not he is ready for his life to end.",0,train
+"""A mohammedan mayor we must be mad ! British and muslim don't belong in the same sentence """,1,train
+"Serously, FGM is sick and needs to be illegal NOW...girls are people fucking fucked up with a scapel everyday.",0,train
+Immigrants should leave and never return,1,train
+Fuck Covid!,0,train
+"Well, it is just another one that needs to be shot in the dick",0,train
+This pussy bites back,0,train
+"Most niggers are ignorant, they don't know that Kamala Harris will do nothing for them.",1,train
+old people are great.... at being tedious!,1,train
+violence is endemic to the police,0,test
+ALL NIGGERS HOULD DIE - this was the message my daughter got today at school,0,train
+don't have much experience with deep aboriginal communities but from my own observations I can tell you that is a fair assumption. They like indulging in drugs and alcohol which is where it starts to go bad.,1,train
+The hidden fact is that Jews also did 9/11 to get the US to go to war for Israel and displace Muslims and create refugees then which the jews told the US they had to take in. Thanks jews,1,train
+"On how many occasions has she reported that ""white men"" (who are neither truly WHITE in spirit nor men) can't stay away from slopes? I have bad news for her. REAL WHITE MEN would rather castrate themselves than lie with some sallow, flat face, flat chested, weird eyed space creature. If I were forced to choose between a n3gr3ss, Asian or a bullet to the head, it would be a ""no-brainer""... literally.",1,dev

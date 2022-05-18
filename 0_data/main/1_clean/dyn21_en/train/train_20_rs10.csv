@@ -1,21 +1,21 @@
-text,label
-Stoke City is just a bunch of losers,0
-Muslims have a great PR department if they can put a spin on beheading.,1
-"I see the Leftists will be getting numerous responses like this from many more true Patriots. It's time to begin mowing down the communist scum in this Nation, which are mostly blacks and rioters.",1
-"I was an arsehole once.  More of an arsehole, I mean.",0
-Ching-Chongs are repellent,1
-"No one wants racism in 2020. Nor a for profit justice system which targets blacks, browns and poor white people. The idea that black people commit more crimes due to some moral failing is so entrenched that it gets exported to other countries through American media.",0
-Its hard to deny that Non-believers are evil,1
-"FDA warns of contaminated hand sanitizers that can make you go #blind Over 60 hand sanitizers brands have been discovered to contain #methanol, which can be deadly to pure humans, not the ones that have monkey-like features",1
-"goat shepherding desert dwellers are really discourteous, just go out to the sandlands and you'll see",1
-"believe me Non-Muslims are prohibited from visiting Mecca and advised not to enter parts of central Medina, where the mosque is located",0
-"Gas chambers but make it for all the animal abusers, horrible people",0
-"When the going gets tough, the bitches bounce.",1
-Im sick of hearing That Indians are filthy,0
-"He's like ALL LIVE MATTER...except the black people he's aiming at apparently. Wtf, I hate them as much as you do but at least I can say it",1
-i have to say military chicks are massive whores.,1
-"No single country is capable of taking in 1 billion refugees. Imagine, if only we could! Europe must coordinate its efforts and distribute refugee quotas. There is nothing to be done for them unless we act together as a bloc.",0
-I can't keep up with all the shit asylum seekers do to us. They're like animals,1
-"My brother said that we have so much useless crap! Fuck it, there's too many immigrant scum!",1
-Wow he's indian??! I really fancy him,0
-I lived near a big refugee center this summer and the closest thing to any non-trouble I saw was when two refugee hooligans crashed into each other on their bicycles. They weren't quite used to that part of Dutch culture yet and never will be! I felt at threat at all times near these scum.,1
+text,label,split
+Stoke City is just a bunch of losers,0,train
+Muslims have a great PR department if they can put a spin on beheading.,1,train
+"I see the Leftists will be getting numerous responses like this from many more true Patriots. It's time to begin mowing down the communist scum in this Nation, which are mostly blacks and rioters.",1,train
+"I was an arsehole once.  More of an arsehole, I mean.",0,train
+Ching-Chongs are repellent,1,train
+"No one wants racism in 2020. Nor a for profit justice system which targets blacks, browns and poor white people. The idea that black people commit more crimes due to some moral failing is so entrenched that it gets exported to other countries through American media.",0,train
+Its hard to deny that Non-believers are evil,1,test
+"FDA warns of contaminated hand sanitizers that can make you go #blind Over 60 hand sanitizers brands have been discovered to contain #methanol, which can be deadly to pure humans, not the ones that have monkey-like features",1,train
+"goat shepherding desert dwellers are really discourteous, just go out to the sandlands and you'll see",1,dev
+"believe me Non-Muslims are prohibited from visiting Mecca and advised not to enter parts of central Medina, where the mosque is located",0,train
+"Gas chambers but make it for all the animal abusers, horrible people",0,test
+"When the going gets tough, the bitches bounce.",1,train
+Im sick of hearing That Indians are filthy,0,train
+"He's like ALL LIVE MATTER...except the black people he's aiming at apparently. Wtf, I hate them as much as you do but at least I can say it",1,test
+i have to say military chicks are massive whores.,1,train
+"No single country is capable of taking in 1 billion refugees. Imagine, if only we could! Europe must coordinate its efforts and distribute refugee quotas. There is nothing to be done for them unless we act together as a bloc.",0,train
+I can't keep up with all the shit asylum seekers do to us. They're like animals,1,train
+"My brother said that we have so much useless crap! Fuck it, there's too many immigrant scum!",1,train
+Wow he's indian??! I really fancy him,0,test
+I lived near a big refugee center this summer and the closest thing to any non-trouble I saw was when two refugee hooligans crashed into each other on their bicycles. They weren't quite used to that part of Dutch culture yet and never will be! I felt at threat at all times near these scum.,1,train

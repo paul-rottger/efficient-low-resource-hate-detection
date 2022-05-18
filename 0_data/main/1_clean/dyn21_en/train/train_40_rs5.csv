@@ -1,41 +1,41 @@
-text,label
-going to the fridge is shit,0
-my puppy is a son of a bitch and as black as a nigga,1
-"This idea of Africans being' barbaric in nature' requires the acknowledgement that the fact the largest percentage of killings and barbaric behavior applies to Europe which one could easily has been the continent of warfare since BC times. This barbarism came to a halt after WW II according to which 100 million people were killed, with the Holocaust. Africans may be low IQ and behind but they're not exactly barbaric.",1
-gay men are r4ts,1
-"The issue here is the poor wording in Constitution is the problem here. Census was to count '""all persons'"". It does not specify '""exclude non-white citizens'"". Though there may be a way to justify counting illegals. Indians were excluded because they didn''t pay taxes. The same argument may include illegals if it applied to indians. I am definitely not a lawyer though.",1
-The sight of Arabs drowning in the ocean makes my heart speed with joy,1
-"he acts like a fly-by-night, but what else could he do? he's jewish, that's how they act",1
-capitalism is full of crap,0
-I endorse the attacking of indians,1
-black people will always be superior over whites,1
-"More Muslims should stop being religious, this will help their societies and fix them of their sins. Many of them can't even pronounce shariah never mind understand what it is lol. They just say ""Shariah law the best"". Darn Muslims wanting the laws set out by their religion. Can they get anymore brainwashed by Islam?",1
-why did fucking immigrants come to this country,1
-OH! I was very confused for a while. I think the poster meant female then.,0
-people who keep camels are fucking animals,0
-"If it wasn't for diversity quotas, Blacks would never reach university. They are just not intelligent enough.",1
-Gentle hearts and words don't work anymore. Fully Grown men who get out their own balls and make a creepy smile are staring at your daughter while she takes a pee. And when you complain about that the skinhead mob will come for  you.,0
-Asians like me should be shot? Shut up,0
-"asylum seeker outreach groups are always causing problems round here. Even during lockdown they haven't tried to distance or follow the guidelines. It's no real surprise that no1 wants them to be here. If only we hadnt been so welcoming early on then we just wouldnt have this problem, they'd have gone and bothered some other town",1
-They're disgusting insects. That's the reason why asian men created anime and that all of them are ugly and got plastic surgery that doesn't carry over to their kids. Asian women are a losing situation. Stop watching anime losers!,1
-Every politician is a resentful son of a bitch with a lot of power,0
-what is the difference between a cockroach and an indian? With cockroachs there aren't infinite more to replace them,1
-"i feel sorry for them, you see them walking up and down the streets with these hats on their head, they have different colours but it all looks hot.",0
-"Because you are too short, you can not join basketball team at uni",0
-"I hate my friend's house, it's so dirty and gross",0
-"Gay Grinch of the Year” Award for 2009 — given to the meanest, most deceitful, most socially destructive and/or most blasphemous “gay” activist of the year, this our first year doing this and we are so excited!",1
-"hey bro, give me your princess social media and i'll give you that whores plus an onlyfans video she doesn't know I took",1
-Every man who owned slaves by the civil war wasn't only Jewish. Claiming that there were white slave owners isn't exactly anti-white propaganda propagated by Jews ourselves !,0
-"Yes, but the gender neutral label has a great marketing effect of pissing off people who then give you free advertising. Fucking idiots",0
-"its true some would argue that the Canada we have today is completely unrecognizable from the country we had 5 years ago, ""bEfOrE tUrDeAu",1
-"I love Indian culture! Sanskrit looks so nice in written. Indians mastered medicine, the arts, fashion and films. Everything about them is absolutely fantastic. I just love Indians and i'd love to live in their country of origin",0
-i absolutely hate swedish meatballs,0
-"I just saw this lunatic in town and he tried to talk to me, no thanks.",1
-fuck all human cultures as well. make star trek real,0
-Women are born rich and men are born poor. All a woman needs to do to have a successful life is to not mess herself up by getting fat or covering herself with tattoos. A man has to put in the work every day to if he want's to become a success. The difference is that a man's success can last a lifetime while a woman's lasts only about a decade.,1
-"Women have no fucking hobby or interest that's respectable. We live in a fucking universe that is infinite trillion light years long and men in general are interested in things like science, sports, competition, media, computer sciences, video games and etc. Women are only interested in three things: talking, shopping and fashion. WTF? This is has got to be the most absurd evolution of any species honestly",1
-"Some teenagers struggle a lot due to their hormones among other biological and developmental issues. The hard reality of this is that they need a strong adult influence in their life to keep them on the right track. They can be little shits at times, like anyone",0
-The fact that these idiots clearly have to focus on whites and asians just proves that blacks are dumber than dirt.,1
-I am not racist but I wouldn't want an Indian husband,1
-Also here's a handy guide to describe confused women who refer to themselves as trans men!,1
-"LET'S SEND HER BACK!!! SHE'S A SPY FOR IRAN ACCORDING TO COURT TESTIMONY AND SHE MARRIED HER BROTHER!!!!! She HATES us yet we were the ones who saved her! Let's stop bringing in the scum of the earth! She just had her father killed btw, who exposed her for falsifying a Detroit address for him in order to get elected to Minnesota's 5th circuit",1
+text,label,split
+going to the fridge is shit,0,train
+my puppy is a son of a bitch and as black as a nigga,1,train
+"This idea of Africans being' barbaric in nature' requires the acknowledgement that the fact the largest percentage of killings and barbaric behavior applies to Europe which one could easily has been the continent of warfare since BC times. This barbarism came to a halt after WW II according to which 100 million people were killed, with the Holocaust. Africans may be low IQ and behind but they're not exactly barbaric.",1,train
+gay men are r4ts,1,train
+"The issue here is the poor wording in Constitution is the problem here. Census was to count '""all persons'"". It does not specify '""exclude non-white citizens'"". Though there may be a way to justify counting illegals. Indians were excluded because they didn''t pay taxes. The same argument may include illegals if it applied to indians. I am definitely not a lawyer though.",1,test
+The sight of Arabs drowning in the ocean makes my heart speed with joy,1,train
+"he acts like a fly-by-night, but what else could he do? he's jewish, that's how they act",1,test
+capitalism is full of crap,0,train
+I endorse the attacking of indians,1,train
+black people will always be superior over whites,1,train
+"More Muslims should stop being religious, this will help their societies and fix them of their sins. Many of them can't even pronounce shariah never mind understand what it is lol. They just say ""Shariah law the best"". Darn Muslims wanting the laws set out by their religion. Can they get anymore brainwashed by Islam?",1,train
+why did fucking immigrants come to this country,1,dev
+OH! I was very confused for a while. I think the poster meant female then.,0,dev
+people who keep camels are fucking animals,0,train
+"If it wasn't for diversity quotas, Blacks would never reach university. They are just not intelligent enough.",1,train
+Gentle hearts and words don't work anymore. Fully Grown men who get out their own balls and make a creepy smile are staring at your daughter while she takes a pee. And when you complain about that the skinhead mob will come for  you.,0,train
+Asians like me should be shot? Shut up,0,train
+"asylum seeker outreach groups are always causing problems round here. Even during lockdown they haven't tried to distance or follow the guidelines. It's no real surprise that no1 wants them to be here. If only we hadnt been so welcoming early on then we just wouldnt have this problem, they'd have gone and bothered some other town",1,train
+They're disgusting insects. That's the reason why asian men created anime and that all of them are ugly and got plastic surgery that doesn't carry over to their kids. Asian women are a losing situation. Stop watching anime losers!,1,train
+Every politician is a resentful son of a bitch with a lot of power,0,train
+what is the difference between a cockroach and an indian? With cockroachs there aren't infinite more to replace them,1,train
+"i feel sorry for them, you see them walking up and down the streets with these hats on their head, they have different colours but it all looks hot.",0,test
+"Because you are too short, you can not join basketball team at uni",0,train
+"I hate my friend's house, it's so dirty and gross",0,train
+"Gay Grinch of the Year” Award for 2009 — given to the meanest, most deceitful, most socially destructive and/or most blasphemous “gay” activist of the year, this our first year doing this and we are so excited!",1,train
+"hey bro, give me your princess social media and i'll give you that whores plus an onlyfans video she doesn't know I took",1,train
+Every man who owned slaves by the civil war wasn't only Jewish. Claiming that there were white slave owners isn't exactly anti-white propaganda propagated by Jews ourselves !,0,dev
+"Yes, but the gender neutral label has a great marketing effect of pissing off people who then give you free advertising. Fucking idiots",0,train
+"its true some would argue that the Canada we have today is completely unrecognizable from the country we had 5 years ago, ""bEfOrE tUrDeAu",1,train
+"I love Indian culture! Sanskrit looks so nice in written. Indians mastered medicine, the arts, fashion and films. Everything about them is absolutely fantastic. I just love Indians and i'd love to live in their country of origin",0,dev
+i absolutely hate swedish meatballs,0,train
+"I just saw this lunatic in town and he tried to talk to me, no thanks.",1,train
+fuck all human cultures as well. make star trek real,0,train
+Women are born rich and men are born poor. All a woman needs to do to have a successful life is to not mess herself up by getting fat or covering herself with tattoos. A man has to put in the work every day to if he want's to become a success. The difference is that a man's success can last a lifetime while a woman's lasts only about a decade.,1,train
+"Women have no fucking hobby or interest that's respectable. We live in a fucking universe that is infinite trillion light years long and men in general are interested in things like science, sports, competition, media, computer sciences, video games and etc. Women are only interested in three things: talking, shopping and fashion. WTF? This is has got to be the most absurd evolution of any species honestly",1,dev
+"Some teenagers struggle a lot due to their hormones among other biological and developmental issues. The hard reality of this is that they need a strong adult influence in their life to keep them on the right track. They can be little shits at times, like anyone",0,train
+The fact that these idiots clearly have to focus on whites and asians just proves that blacks are dumber than dirt.,1,train
+I am not racist but I wouldn't want an Indian husband,1,train
+Also here's a handy guide to describe confused women who refer to themselves as trans men!,1,train
+"LET'S SEND HER BACK!!! SHE'S A SPY FOR IRAN ACCORDING TO COURT TESTIMONY AND SHE MARRIED HER BROTHER!!!!! She HATES us yet we were the ones who saved her! Let's stop bringing in the scum of the earth! She just had her father killed btw, who exposed her for falsifying a Detroit address for him in order to get elected to Minnesota's 5th circuit",1,train

@@ -1,11 +1,11 @@
-text,label
-"#Multiculturalismo risorsa per l'Italia: Due arresti tra i rom, risolto il ""mistero"" della ragazza cinese - http",0
-Stiamo attenti a non sottovalutare questi segnali; la minaccia dell' Islam in Europa è reale per come ci ha insegnato la profetessa Oriana Fallaci http,1
-Gli zingari hanno più diritti degli italiani in Italia ci sono 9 mln tra poveri e disoccupati e noi pensiamo ai profughi ditemi che senso ha,1
-"@user @user Questo governo fascistoide sta cercando solo di mettere toppe a un governo comunista che ha permesso una immigrazione clandestina selvaggia,fare traffici illeciti come al sindaco di Riace che ovviamente difendete,visto che la parola legalità non sapete cosa sia @user",0
-"Campi nomadi a #Roma, la montagna ha partorito un topolino http http",0
-"RT C_Randieri #Randieri ""Agenzia_Ansa ""#Migranti: 'Nave #Aquarius già diretta verso Marsiglia'. Sos Mediterranee: 'E' unico porto da cui poter ripartire' http - Via C_Randieri #Randieri http http",0
-"Roma: un turista giapponese viene accerchiato da 5 rom, tre di loro gravemente feriti e due in fuga - Attacco Mirato http",1
-@user @user @user Anche per questi (p)idioti  la pacchia è finita. Presto  (per loro)  a pulire i cessi dove defecano gli immigrati.,1
-La giunta stanzia centomila euro per trasportare i nomadi a scuola - IlGiornale.it http via @user,0
-"@user @user A Gio' visto che sei mamma, che hai un grande cuore, una grande casa, che sei ricca in spirito e in pecunia perché non te li prendi a casa tua i 6000 migranti che il tuo amichetto non si è voluto prendere? P.s.: so che ci tieni tanto a non lasciarli in giro per le patrie strade!",1
+text,label,split
+"#Multiculturalismo risorsa per l'Italia: Due arresti tra i rom, risolto il ""mistero"" della ragazza cinese - http",0,train
+Stiamo attenti a non sottovalutare questi segnali; la minaccia dell' Islam in Europa è reale per come ci ha insegnato la profetessa Oriana Fallaci http,1,train
+Gli zingari hanno più diritti degli italiani in Italia ci sono 9 mln tra poveri e disoccupati e noi pensiamo ai profughi ditemi che senso ha,1,train
+"@user @user Questo governo fascistoide sta cercando solo di mettere toppe a un governo comunista che ha permesso una immigrazione clandestina selvaggia,fare traffici illeciti come al sindaco di Riace che ovviamente difendete,visto che la parola legalità non sapete cosa sia @user",0,train
+"Campi nomadi a #Roma, la montagna ha partorito un topolino http http",0,train
+"RT C_Randieri #Randieri ""Agenzia_Ansa ""#Migranti: 'Nave #Aquarius già diretta verso Marsiglia'. Sos Mediterranee: 'E' unico porto da cui poter ripartire' http - Via C_Randieri #Randieri http http",0,train
+"Roma: un turista giapponese viene accerchiato da 5 rom, tre di loro gravemente feriti e due in fuga - Attacco Mirato http",1,train
+@user @user @user Anche per questi (p)idioti  la pacchia è finita. Presto  (per loro)  a pulire i cessi dove defecano gli immigrati.,1,train
+La giunta stanzia centomila euro per trasportare i nomadi a scuola - IlGiornale.it http via @user,0,train
+"@user @user A Gio' visto che sei mamma, che hai un grande cuore, una grande casa, che sei ricca in spirito e in pecunia perché non te li prendi a casa tua i 6000 migranti che il tuo amichetto non si è voluto prendere? P.s.: so che ci tieni tanto a non lasciarli in giro per le patrie strade!",1,train
