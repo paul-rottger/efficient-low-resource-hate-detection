@@ -22,7 +22,7 @@ source activate $DATA/conda-envs/lrh-env
 # Pick base model to then continue finetuning (-->FT2)
 basemodel="xlmt_dyn21_en_20000_rs1"
 
-for dataset in bas19_es for19_pt ous19_fr ous19_ar san20_it; do
+for dataset in bas19_es for19_pt ous19_ar san20_it; do
     for split in 10 20 30 40 50 100 200 300 400 500 1000 2000; do
         python finetune_and_test.py \
             --model_name_or_path $DATA/low-resource-hate/english-base-models/${basemodel}/ \

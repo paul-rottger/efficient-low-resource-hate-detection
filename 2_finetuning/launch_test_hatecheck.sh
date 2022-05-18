@@ -17,8 +17,8 @@ module load Anaconda3/2020.11
 # activate the right conda environment
 source activate $DATA/conda-envs/lrh-env
 
-for dataset in bas19_es for19_pt ous19_fr ous19_ar san20_it; do
-    for modelpath in $DATA/low-resource-hate/finetuned-models/random-sample/multilingual-models/xlmt*${dataset}*/; do
+for dataset in bas19_es for19_pt ous19_ar san20_it; do
+    for modelpath in $DATA/low-resource-hate/finetuned-models/random-sample/multilingual-models/xlmt_dyn21_en_0*${dataset}*/; do
         for testpath in $DATA/low-resource-hate/0_data/hatecheck/*_$(basename $dataset | cut -c7-9).csv; do
             python finetune_and_test.py \
                 --model_name_or_path ${modelpath} \
