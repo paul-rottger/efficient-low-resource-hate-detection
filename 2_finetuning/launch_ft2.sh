@@ -20,7 +20,7 @@ module load Anaconda3/2020.11
 source activate $DATA/conda-envs/lrh-env
 
 # Pick base model to then continue finetuning (-->FT2)
-basemodel="xlmr_dyn21_en_20000_rs1"
+basemodel="xlmt_dyn21_en_20000_rs1"
 
 for dataset in bas19_es for19_pt ous19_ar san20_it has19_hi has20_hi has21_hi; do
     for split in 10 20 30 40 50 100 200 300 400 500 1000 2000; do
