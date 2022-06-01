@@ -35,7 +35,7 @@ for dataset in bas19_es for19_pt ous19_ar san20_it; do
                 --num_train_epochs 5 \
                 --max_seq_length 128 \
                 --do_eval \
-                --per_device_eval_batch_size 32 \
+                --per_device_eval_batch_size 64 \
                 --evaluation_strategy "epoch" \
                 --save_strategy "epoch" \
                 --save_total_limit 1 \
@@ -43,8 +43,9 @@ for dataset in bas19_es for19_pt ous19_ar san20_it; do
                 --metric_for_best_model "macro_f1" \
                 --output_dir $DATA/low-resource-hate/finetuned-models/random-sample/multilingual-models/${basemodel}_${dataset}_${split}_${seed} \
                 --overwrite_output_dir
+
+            rm -rf $DATA/low-resource-hate/finetuned-models/random-sample/multilingual-models/${basemodel}_${dataset}_${split}_${seed}/check*
         done
     done
 done
 
-rm -rf $DATA/low-resource-hate/finetuned-models/random-sample/multilingual-models/${basemodel}_${dataset}_${split}_${seed}/check*

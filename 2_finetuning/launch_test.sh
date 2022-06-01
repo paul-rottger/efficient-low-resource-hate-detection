@@ -27,7 +27,7 @@ for dataset in bas19_es for19_pt ous19_ar san20_it; do
                 --test_file ${testpath} \
                 --test_results_dir $DATA/low-resource-hate/results/${dataset}_$(basename $testpath .csv) \
                 --test_results_name $(basename $modelpath).csv \
-                --per_device_eval_batch_size 32 \
+                --per_device_eval_batch_size 64 \
                 --max_seq_length 128 \
                 --output_dir .
         done

@@ -34,6 +34,7 @@ for split in 10 20 30 40 50 100 200 300 400 500 1000 2000 3000 4000 5000 10000 2
         --save_strategy "no" \
         --do_eval \
         --evaluation_strategy "epoch" \
+        --per_device_eval_batch_size 64 \
         --output_dir $DATA/low-resource-hate/english-base-models/xlmt_${dataset}_${split}_rs1 \
         --overwrite_output_dir
 done
