@@ -7,6 +7,7 @@ import sys
 import numpy as np
 import pandas as pd
 import transformers
+import torch
 
 from dataclasses import dataclass, field
 from typing import Optional
@@ -26,7 +27,6 @@ from transformers.trainer_utils import is_main_process
 from sklearn.metrics import precision_recall_fscore_support, f1_score
 from sklearn.utils.class_weight import compute_class_weight
 from pathlib import Path
-from torch import nn
 
 
 # initialise logger
@@ -253,7 +253,7 @@ def main():
                 outputs = model(**inputs)
                 logits = outputs.get("logits")
                 # compute custom loss 
-                weighted_loss_fct = nn.CrossEntropyLoss(weight=class_weights)
+                weighted_loss_fct = torch.nn.CrossEntropyLoss(weight=torch.tensor(class_weights))
                 return weighted_loss_fct(logits, labels)
 
         trainer = WeightedTrainer(

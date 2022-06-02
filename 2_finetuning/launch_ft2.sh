@@ -31,7 +31,7 @@ for dataset in has19_hi has20_hi has21_hi; do
                 --validation_file $DATA/low-resource-hate/0_data/main/1_clean/${dataset}/dev_*.csv \
                 --dataset_cache_dir $DATA/low-resource-hate/z_cache/datasets \
                 --do_train \
-                --use_class_weights \
+                --use_class_weights true \
                 --per_device_train_batch_size 16 \
                 --num_train_epochs 5 \
                 --max_seq_length 128 \
