@@ -243,7 +243,11 @@ def main():
         
         logger.info("** USING WEIGHTED LOSS**")
 
-        class_weights = compute_class_weight('balanced', classes = label_list, y = datasets["train"]["label"])
+        if len(pd.unique(datasets["train"]["label"]))<2: # if a small sample only has examples of one class, we cannot do weighting
+            class_weights = compute_class_weight('balanced', classes = label_list, y = label_list)
+        else:
+            class_weights = compute_class_weight('balanced', classes = label_list, y = datasets["train"]["label"])
+        
         logger.info(f"class weights: {class_weights}")
 
         class WeightedTrainer(Trainer):
