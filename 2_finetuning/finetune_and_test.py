@@ -247,14 +247,15 @@ def main():
         logger.info(f"class weights: {class_weights}")
 
         class WeightedTrainer(Trainer):
-            def compute_loss(self, model, inputs):
+            def compute_loss(self, model, inputs, return_outputs=False):
                 labels = inputs.get("labels")
                 # forward pass
                 outputs = model(**inputs)
                 logits = outputs.get("logits")
                 # compute custom loss 
-                weighted_loss_fct = torch.nn.CrossEntropyLoss(weight=torch.tensor(class_weights))
-                return weighted_loss_fct(logits, labels)
+                weighted_loss_fct = torch.nn.CrossEntropyLoss(weight=torch.FloatTensor(class_weights))
+                loss = weighted_loss_fct(logits, labels)
+                return (loss, outputs) if return_outputs else loss
 
         trainer = WeightedTrainer(
             model=model,
