@@ -24,7 +24,9 @@ from transformers import (
 )
 from transformers.trainer_utils import is_main_process
 from sklearn.metrics import precision_recall_fscore_support, f1_score
+from sklearn.utils.class_weight import compute_class_weight
 from pathlib import Path
+from torch import nn
 
 
 # initialise logger
@@ -68,6 +70,8 @@ class DataTrainingArguments:
     test_results_name: Optional[str] = field(default='results', metadata = {"help": "PR custom: specify name for test results .csv"}
     )
     store_prediction_logits: Optional[str] = field(default=False, metadata = {"help": "PR custom: decide whether to store logits along with discrete predictions during test"}
+    )
+    use_class_weights: Optional[str] = field(default=False, metadata = {"help": "PR custom: decide whether to use class weighting when calculating loss"}
     )
 
 
@@ -235,15 +239,46 @@ def main():
         data_collator = None
 
     # initialize the trainer
-    trainer = Trainer(
-        model=model,
-        args=training_args,
-        train_dataset=datasets["train"] if training_args.do_train else None,
-        eval_dataset=datasets["validation"] if training_args.do_eval else None,
-        compute_metrics=compute_metrics,
-        tokenizer=tokenizer,
-        data_collator=data_collator,
-    )
+    if data_args.use_class_weights:
+        
+        logger.info("** USING WEIGHTED LOSS**")
+
+        class_weights = compute_class_weight('balanced', classes = label_list, y = datasets["train"]["label"])
+        logger.info(f"class weights: {class_weights}")
+
+        class WeightedTrainer(Trainer):
+            def compute_loss(self, model, inputs):
+                labels = inputs.get("labels")
+                # forward pass
+                outputs = model(**inputs)
+                logits = outputs.get("logits")
+                # compute custom loss 
+                weighted_loss_fct = nn.CrossEntropyLoss(weight=class_weights)
+                return weighted_loss_fct(logits, labels)
+
+        trainer = WeightedTrainer(
+            model=model,
+            args=training_args,
+            train_dataset=datasets["train"] if training_args.do_train else None,
+            eval_dataset=datasets["validation"] if training_args.do_eval else None,
+            compute_metrics=compute_metrics,
+            tokenizer=tokenizer,
+            data_collator=data_collator,
+        )
+
+    else:
+        
+        logger.info("** USING STANDARD UNWEIGHTED LOSS**")
+
+        trainer = Trainer(
+            model=model,
+            args=training_args,
+            train_dataset=datasets["train"] if training_args.do_train else None,
+            eval_dataset=datasets["validation"] if training_args.do_eval else None,
+            compute_metrics=compute_metrics,
+            tokenizer=tokenizer,
+            data_collator=data_collator,
+        )
 
     # TRAINING
     if training_args.do_train:
