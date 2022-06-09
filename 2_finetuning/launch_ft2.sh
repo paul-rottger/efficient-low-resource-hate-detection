@@ -44,7 +44,7 @@ for dataset in has21_hi; do
                 --output_dir $DATA/low-resource-hate/finetuned-models/random-sample/multilingual-models/${basemodel}_${dataset}_${split}_${seed} \
                 --overwrite_output_dir
 
-            rm -rf $DATA/low-resource-hate/finetuned-models/random-sample/multilingual-models/${basemodel}_w_${dataset}_${split}_${seed}/check*
+            rm -rf $DATA/low-resource-hate/finetuned-models/random-sample/multilingual-models/${basemodel}_${dataset}_${split}_${seed}/check*
         done
     done
 done
